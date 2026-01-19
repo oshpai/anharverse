@@ -1,0 +1,384 @@
+/* =========================================================
+   Base / Reset
+========================================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+body{
+  background: #faf9f7;
+  color: #1b1b1b;
+  font-family: "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   Topbar
+========================================================= */
+.topbar{ background: #f5f3ee; }
+
+.topbar__inner{
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 16px 0;
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar__logo{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.topbar__nav{
+  display: flex;
+  justify-content: flex-end;
+  gap: 26px;
+  font-weight: 500;
+  color: #2a2a2a;
+}
+
+.topbar__nav a{
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.9;
+}
+.topbar__nav a:hover{ opacity: 0.7; }
+
+.topbar__cta{
+  text-decoration: none;
+  background: #6f8f7d;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.topbar__rule{
+  height: 2px;
+  background: rgba(40, 40, 40, 0.25);
+}
+
+/* =========================================================
+   Page
+========================================================= */
+.page{
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 42px 0 60px;
+}
+
+/* =========================================================
+   Title
+========================================================= */
+.page__title{
+  text-align: center;
+  margin-top: 18px;
+  margin-bottom: 30px;
+}
+
+.page__title h1{
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.2;
+  font-weight: 600;
+  color: #4f6f5f;
+}
+
+.page__title p{
+  margin-top: 10px;
+  color: #6a6a6a;
+  font-size: 16px;
+}
+
+/* Right-aligned title variant */
+.page__title--right{
+  width: 100%;
+  direction: rtl;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.page__title--right .page__titleH1,
+.page__title--right .page__titleP{
+  display: block;
+  width: 100%;
+}
+
+/* =========================================================
+   Content + Base Block Layout
+========================================================= */
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+/* Lock grid ordering (LTR) while allowing RTL text inside .block__text */
+.block{
+  direction: ltr;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 42px;
+  align-items: start;
+}
+
+/* Default text style inside blocks */
+.block__text{
+  direction: rtl;
+  text-align: right;
+  color: #5b5b5b;
+  font-size: 14px;
+}
+
+.block__text p + p{ margin-top: 16px; }
+
+.block__subhead{
+  font-family: "Inter", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #1b1b1b;
+  margin-bottom: 10px;
+}
+
+.block__media img{
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+/* =========================================================
+   Signature (generic)
+========================================================= */
+.signature{
+  margin-top: 18px;
+  color: #7a7a7a;
+  font-size: 13px;
+}
+
+/* =========================================================
+   Footer
+========================================================= */
+.footer{
+  background: #f5f3ee;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.footer__inner{
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 26px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer__logo{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.footer__title{
+  font-size: 16px;
+  font-weight: 600;
+  color: #4f6f5f;
+  margin-bottom: 10px;
+}
+
+.footer__social a{
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  border: 1px solid rgba(0,0,0,0.18);
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #4f6f5f;
+  margin-left: 8px;
+}
+
+.footer__headline{
+  font-size: 18px;
+  font-weight: 600;
+  color: #4f6f5f;
+}
+
+/* =========================================================
+   Row 1 (text LEFT, image RIGHT) – tuned to design
+========================================================= */
+.block--row1{
+  grid-template-columns: 1fr 1.25fr;
+}
+
+.block--row1 .block__text{
+  max-width: 520px;
+  justify-self: start;
+}
+
+.block--row1 .block__media{
+  justify-self: end;
+}
+
+.block--row1 .block__media img{
+  border-radius: 8px;
+}
+
+/* =========================================================
+   Row 2 (image LEFT, text RIGHT) – softer + narrower
+========================================================= */
+.block--row2{
+  grid-template-columns: 1.25fr 1fr;
+}
+
+.block--row2 .block__media{
+  justify-self: start;
+}
+
+.block--row2 .block__text{
+  justify-self: end;
+  max-width: 520px;
+  color: #6a6a6a;
+  font-size: 15px;
+  line-height: 2.0;
+}
+
+.block--row2 .block__text p + p{ margin-top: 18px; }
+
+.block--row2 .block__subhead{
+  font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #6a6a6a;
+  margin-bottom: 14px;
+}
+
+/* =========================================================
+   Row 3 (poem LEFT, image RIGHT)
+========================================================= */
+.block--row3{
+  grid-template-columns: 420px 1fr;
+  gap: 80px;
+  margin-top: 8px;
+}
+
+.block--row3 .block__text--poem{
+  max-width: 420px;
+  justify-self: start;
+  text-align: center;
+  color: #6a6a6a;
+  font-size: 14px;
+  line-height: 2.2;
+}
+
+.block--row3 .poem__title{
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 22px;
+  color: #6a6a6a;
+}
+
+.block--row3 .poem__stanza{ margin: 0; }
+.block--row3 .poem__stanza + .poem__stanza{ margin-top: 46px; }
+
+.block--row3 .block__media{ justify-self: end; }
+
+.block--row3 .block__media img{
+  width: min(520px, 100%);
+  border-radius: 8px;
+}
+
+/* =========================================================
+   Row 4 (image LEFT, centered text RIGHT)
+========================================================= */
+.block--row4{
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+}
+
+.block--row4 .block__media{ justify-self: start; }
+
+.block--row4 .block__media img{
+  width: 100%;
+  max-width: 460px;
+  border-radius: 10px;
+}
+
+.block--row4 .block__text--row4{
+  justify-self: end;
+  max-width: 520px;
+  text-align: center;
+  color: #6a6a6a;
+  font-size: 14px;
+  line-height: 2.15;
+
+  /* still RTL text, even though centered */
+  direction: rtl;
+}
+
+.block--row4 .row4__title{
+  margin: 0 0 24px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #6a6a6a;
+}
+
+.block--row4 .row4__p{ margin: 0; }
+.block--row4 .row4__p + .row4__p{ margin-top: 22px; }
+
+.block--row4 .row4__signature{ margin-top: 44px; }
+
+.block--row4 .row4__brand{
+  font-size: 13px;
+  font-weight: 600;
+  color: #6a6a6a;
+  margin-bottom: 10px;
+}
+
+.block--row4 .row4__sigText{
+  font-size: 13px;
+  line-height: 2.1;
+  color: #6a6a6a;
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+@media (max-width: 900px){
+  .block,
+  .block--row1,
+  .block--row2,
+  .block--row3,
+  .block--row4{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .topbar__inner{
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .topbar__cta{ justify-self: start; }
+
+  /* Let media and text stack naturally */
+  .block__media,
+  .block__text{
+    justify-self: stretch;
+    max-width: none;
+    text-align: right;
+  }
+
+  /* Keep poem centered on mobile */
+  .block--row3 .block__text--poem{ text-align: center; }
+}
