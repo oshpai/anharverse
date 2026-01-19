@@ -1,0 +1,458 @@
+/* --------- Reset-ish --------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+
+
+/* --------- Hero background --------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("assets/landing_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  /* soft overlay similar to your screenshot */
+  background: radial-gradient(
+      1200px 600px at 55% 45%,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.55)
+    );
+  z-index: 0;
+}
+
+/* --------- Navbar --------- */
+.nav {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  padding: 28px 56px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  justify-self: start;
+}
+
+.brand__logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.35));
+}
+
+.brand__name {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  opacity: 0.95;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 34px;
+  justify-self: center;
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.9);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  transition: opacity 180ms ease;
+}
+
+.nav__links a:hover { opacity: 0.75; }
+
+/* right-side button */
+.nav > .btn { justify-self: end; }
+
+/* --------- Hero content --------- */
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 24px;
+}
+
+.hero__title {
+  font-size: clamp(48px, 6vw, 86px);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 14px 40px rgba(0,0,0,0.55);
+}
+
+.hero__subtitle {
+  margin-top: 14px;
+  font-size: clamp(16px, 2vw, 22px);
+  opacity: 0.9;
+  letter-spacing: 0.3px;
+  text-shadow: 0 10px 24px rgba(0,0,0,0.45);
+}
+
+.hero__content .btn {
+  margin-top: 26px;
+}
+
+/* --------- Buttons --------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, opacity 160ms ease;
+  backdrop-filter: blur(6px);
+}
+
+.btn--solid {
+  background: rgba(74, 117, 100, 0.9); /* green-ish like screenshot */
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+.btn--outline {
+  background: rgba(0,0,0,0.20);
+  color: rgba(255,255,255,0.92);
+  border: 2px solid rgba(74, 117, 100, 0.75);
+}
+
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0px); opacity: 0.95; }
+
+/* --------- Responsive tweaks --------- */
+@media (max-width: 820px) {
+  .nav {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    row-gap: 14px;
+    padding: 22px 20px;
+  }
+
+  .nav__links {
+    grid-column: 1 / -1;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .nav > .btn {
+    justify-self: end;
+  }
+}
+
+
+.landing {
+  position: relative; 
+  z-index: 1;
+  background: #fff;
+  color: #111;
+  padding: 42px 0 0;
+}
+
+.landing {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+/* main two-column layout */
+.landing__grid {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.landing__col {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* Arabic body typography */
+.landing {
+  font-family: "IBM Plex Sans Arabic", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Default: Arabic text should be right-aligned (NOT centered) */
+.landing__text {
+  text-align: right;
+  padding: 6px 8px;
+
+  /* makes paragraphs look cleaner */
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+/* Only this block stays centered (your intro paragraph) */
+.landing__text--center {
+  text-align: center;
+}
+
+/* Headings: match the “Inter 600 / 40px / 120% / 0%” look */
+.landing__h,
+.landing__h2 {
+  font-family: "Inter", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;      /* 120% */
+  letter-spacing: 0;
+  text-align: right;     /* force right for RTL headings */
+  margin: 0;
+}
+
+/* Sizes (adjust if needed) */
+.landing__h  { font-size: 40px; margin-bottom: 12px; }
+.landing__h2 { font-size: 22px; margin-top: 18px; margin-bottom: 10px; }
+
+/* Paragraphs: more breathable */
+.landing__p,
+.landing__text--center p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* Lists: clean RTL bullets without "centered weirdness" */
+.landing__list {
+  direction: rtl;
+  text-align: right;
+  list-style: disc;
+  padding-inline-start: 0;      /* remove left padding */
+  padding-inline-end: 22px;     /* add right padding for bullets */
+  margin: 10px 0 0;
+  line-height: 2;
+  color: #222;
+  font-size: 16px;
+}
+
+.landing[dir="rtl"] .landing__text .landing__h,
+.landing[dir="rtl"] .landing__text .landing__h2,
+.landing[dir="rtl"] .landing__text h3,
+.landing[dir="rtl"] .landing__text h4 {
+  text-align: right;
+}
+
+/* plain images */
+.landing__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.landing__img--plain {
+  max-width: 360px;
+}
+
+/* framed image boxes */
+.landing__frame {
+  border-radius: 18px;
+  border: 2px solid rgba(75, 105, 92, 0.55);
+  background: #f7f8f7;
+  padding: 14px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+  margin: 0 auto;
+}
+
+.landing__frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.landing__frame--big { max-width: 520px; }
+.landing__frame--mid { max-width: 380px; }
+
+.landing__frame--pink {
+  border-color: rgba(196, 149, 166, 0.55);
+  background: #fbf5f7;
+  max-width: 380px;
+}
+
+/* bottom CTA */
+.landing__cta {
+  margin-top: 40px;
+  padding: 28px 0;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.landing__ctaText {
+  color: #333;
+  font-size: 14px;
+}
+
+/* footer */
+.landing__footer {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 34px 0 44px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.landing__footerTitle {
+  color: #444;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.landing__socials a {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #666;
+  margin-right: 8px;
+}
+
+.landing__footerHeadline {
+  color: #4a4a4a;
+  font-size: 18px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .landing__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing__frame--big,
+  .landing__frame--mid,
+  .landing__frame--pink {
+    max-width: 520px;
+  }
+}
+
+.landing__text--center{
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 10px 12px;
+}
+
+.landing__introTitle{
+  font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #111;
+  margin: 0 0 14px;
+}
+
+.landing__introBody{
+  font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2.1;
+  color: #777;
+  margin: 0;
+}
+
+.landing__introBody--right{
+  text-align: right;
+}
+
+.landing__note{
+  margin-top: 10px;
+  color: #111;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.landing__icon{
+  display: inline-block;
+  margin-inline: 8px;
+  transform: translateY(1px);
+}
+.landing__text--flushRight{
+  max-width: none;
+  margin-inline: 0;
+  margin-right: 0;
+  text-align: right;
+}
+
+/* CTA: text above + two buttons */
+.landing__cta{
+  margin-top: 40px;
+  padding: 36px 0;
+  border-top: 1px solid #eee;
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+  text-align: center;
+}
+
+.landing__ctaTopText{
+  font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* buttons row */
+.landing__ctaActions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* grey "button" next to green */
+.btn--ghost{
+  background: #ececec;
+  color: #222;
+  border: 1px solid #e2e2e2;
+  box-shadow: none;
+}
+
+.btn--ghost:hover{
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
