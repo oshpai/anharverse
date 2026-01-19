@@ -321,6 +321,7 @@ body{
   color: #6a6a6a;
   font-size: 14px;
   line-height: 2.15;
+  margin-right: 5vw;
 
   /* still RTL text, even though centered */
   direction: rtl;
