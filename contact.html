@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnharVerse - About</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header class="top">
+    <<div class="top__inner">
+      <!-- Right side (RTL start): pill button + links -->
+      <nav class="top__nav" aria-label="Main">
+        <a class="top__btn" href="#">تعرّف على</a>
+        <a class="top__link" href="#">عن عالم أنهار</a>
+        <a class="top__link" href="#">الأعمال</a>
+        <a class="top__link" href="#">تواصل</a>
+      </nav>
+
+      <!-- Left side logo -->
+      <a class="top__brand" href="#" aria-label="AnharVerse">
+        <!-- Replace src with your mark -->
+        <img class="top__logo" src="assets/logo.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- Main white area -->                                          
+  <main class="page">
+
+    <section class="aboutPage">
+      <div class="aboutPage__inner">
+
+        <div class="aboutPage__grid">
+
+          <!-- LEFT: image + contact form -->
+          <aside class="aboutPage__left">
+
+            <figure class="aboutCardMedia">
+              <img src="assets/about_hero.png" alt="Anhar writing at a desk">
+            </figure>
+
+            <div class="contactCard">
+              <h3 class="contactCard__title">سعيدة بتواصلكم</h3>
+
+              <form class="contactForm">
+                <div class="field">
+                  <label class="field__label" for="name">الاسم</label>
+                  <input class="field__input" id="name" name="name" type="text" placeholder="أنهار">
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="family">العائلة</label>
+                  <input class="field__input" id="family" name="family" type="text" placeholder="آل مها">
+                </div>
+
+                <div class="field field--full">
+                  <label class="field__label" for="email">عنوان البريد الإلكتروني</label>
+                  <input class="field__input" id="email" name="email" type="email" placeholder="anharverse@gmail.com">
+                </div>
+
+                <div class="field field--full">
+                  <label class="field__label" for="msg">رسالتي</label>
+                  <textarea class="field__textarea" id="msg" name="msg" rows="5"
+                    placeholder="هذا الموقع ليس لعرض إنجازات...&#10;بل لمشاركة رحلة...&#10;وتحويل الإلهام إلى أثرٍ ومعنى..."></textarea>
+                </div>
+
+                <button class="contactForm__submit" type="submit">Submit</button>
+              </form>
+            </div>
+
+          </aside>
+
+          <!-- RIGHT: text -->
+          <article class="aboutPage__right">
+            <h1 class="aboutPage__title">عن أنهار</h1>
+            <p class="aboutPage__meta">مؤلفة، رسامة، مصممة، معلمة، ورائدة أعمال</p>
+
+            <div class="aboutPage__body">
+              <p>
+                تشكّلت رؤيتي عبر رحلة طويلة من التجربة والاستكشاف.
+                قادني الإيمان إلى الوعي… لأمنح كل شيءٍ هوية عبر الفهم والتجربة.
+              </p>
+
+              <p>
+                تخصصت في اللغة الإنجليزية، ومع ذلك كان اهتمامي في مسارات إنسانية أكثر عمقًا:
+                التعليم والتربية، منظور وعي الإنسان قبل المنهج، والطلبة قبل التقييم.
+              </p>
+
+              <p>
+                إلى جانب التعليم… خضت تجربة ريادة الأعمال من خلال أفكار ومشاريع حقيقية.
+                بدأت من الإيمان بالفكرة، ومحاولة تحويلها إلى واقع، ثم التوقف أحيانًا لإعادة الفهم والتعلّم.
+              </p>
+
+              <p class="aboutPage__question">
+                لكن ريادة الأعمال بالنسبة لي ليست “سعياً للنتائج”، بل رحلة لفهم أعمق:
+                كيف تولد الفكرة، وكيف تنضج، وكيف قد لا تكتمل… لكنها تترك وعياً لا يضيع.
+              </p>
+
+              <p>
+                من هذه التجارب وُلد عالم AnharVerse
+                وتشكلت شخصيتان: نهيرة وأنا.
+                كامتداد لتعدد المهارات والتجارب الإنسانية، وجانبين لرحلة واحدة… ما زالت تُكتب.
+              </p>
+
+              <p class="aboutPage__closing">
+                نهيرة وأنا هما جزء من هذه الرحلة. <br>
+                أما القصة… فما زالت تُكتب.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+      <div class="aboutPage__rule"></div>
+
+      <!-- Footer strip -->
+      <footer class="stripFooter">
+        <div class="stripFooter__inner">
+          <div class="stripFooter__left">
+            <img class="stripFooter__mark" src="assets/logo.png" alt="">
+            <p class="stripFooter__small">نلتقي أيضًا هنا..</p>
+            <div class="stripFooter__social" dir="ltr">
+              <a href="#" aria-label="Facebook">●</a>
+              <a href="#" aria-label="LinkedIn">●</a>
+              <a href="#" aria-label="YouTube">●</a>
+              <a href="#" aria-label="Instagram">●</a>
+            </div>
+          </div>
+
+          <h3 class="stripFooter__headline">الرحلة مازالت في بدايتها...</h3>
+        </div>
+      </footer>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
