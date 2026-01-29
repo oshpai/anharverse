@@ -3,197 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AnharVerse</title>
+  <title>AnharVerse Header</title>
 
+  <!-- Optional font (matches your vibe) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="landing.css" />
 </head>
 <body>
 
-  <header class="hero" aria-label="Landing hero">
-    <div class="hero__overlay"></div>
+  <header class="top">
+    <div class="top__inner">
+      <!-- Right side (RTL start): pill button + links -->
+      <nav class="top__nav" aria-label="Main">
+        <a class="top__btn" href="#">تعرّف على</a>
+        <a class="top__link" href="index.html">عن عالم أنهار</a>
+        <a class="top__link" href="#">الأعمال</a>
+        <a class="top__link" href="contact.html">تواصل</a>
+      </nav>
 
-    <nav class="nav">
-      <a class="brand" href="#">
-        <img class="brand__logo" src="assets/logo.png" alt="AnharVerse logo" />
-        <span class="brand__name">AnharVerse</span>
+      <!-- Left side logo -->
+      <a class="top__brand" href="#" aria-label="AnharVerse">
+        <!-- Replace src with your mark -->
+        <img class="top__logo" src="assets/logo.png" alt="">
       </a>
+    </div>
 
-      <ul class="nav__links">
-        <li><a href="landing.html">Home</a></li>
-        <li><a href="Article.html">Article</a></li>
-        <li><a href="contact.html">About</a></li>
-      </ul>
+    <div class="top__rule"></div>
 
-      <a class="btn btn--outline" href="#">Button</a>
-    </nav>
-
-    <main class="hero__content">
-      <h1 class="hero__title">AnharVerse</h1>
-      <p class="hero__subtitle">where ideas become awareness</p>
-      <a class="btn btn--solid" href="#">Button</a>
-    </main>
+    <section class="hero">
+      <h1 class="hero__title">هنا تبدأ الحكاية: من فكرة.. إلى عالمٍ يُروى.</h1>
+      <p class="hero__sub">مساحة تُروى فيها الأفكار… وتنمو لتصنع أثرًا إنسانياً يتجاوز الحكاية.</p>
+    </section>
   </header>
+<main class="page">
+  <section class="heroMedia">
+    <div class="heroMedia__inner">
+      <figure class="heroMedia__frame">
+        <!-- replace with your actual image path -->
+        <img class="heroMedia__img" src="assets/landing_background.png" alt="AnharVerse workspace" />
+      </figure>
 
-  <!-- ===== Rest of landing page ===== -->
-  <div class="landing" dir="rtl">
+      <div class="heroMedia__actions">
+        <a class="btn btn--sage" href="#">تابع الرحلة</a>
+      </div>
+    </div>
 
-    <section class="landing__grid">
+    <div class="heroMedia__rule"></div>
+  </section>
 
-      <!-- LEFT COLUMN -->
-      <div class="landing__col landing__col--left">
+  <section class="aboutIntro" aria-label="What is AnharVerse">
+  <div class="aboutIntro__inner">
+    <h2 class="aboutIntro__title">ماهو عالم أنهار؟</h2>
 
-        <!-- Top Arabic paragraph (centered) -->
-        <div class="landing__text landing__text--center">
-          <!-- ✅ from figma -->
-          <h3 class="landing__introTitle">حين تتجسد الفكرة في شخصيات</h3>
+    <p class="aboutIntro__p">
+      مساحة تبدأ فيها الأفكار بوعي، وتُروى بالحكاية، وتتحول إلى أعمال ذات معنى.
+    </p>
 
-          <!-- ✅ from figma -->
-          <p class="landing__introBody landing__introBody--right">
-            لم تولد نهيرة وآنا كشخصيتين منفصلتين،<br>
-            بل كامتداد لتجربة واحدة،<br>
-            نمت فيها المهارات،<br>
-            وتشكّل الوعي عبر سنوات من البحث والتعلّم.
-          </p>
-        </div>
+    <p class="aboutIntro__p aboutIntro__p--green">
+      هنا تبدأ رحلتي في تأليف وتصميم أول عمل يعكس هويتي.
+    </p>
+  </div>
 
-        <!-- Illustration (reading) -->
-        <img class="landing__img landing__img--plain"
-             src="assets/reading_nuhaira.png"
-             alt="Reading illustration">
+  <div class="aboutIntro__rule" aria-hidden="true"></div>
+</section>
 
-        <!-- Big framed image card -->
-        <div class="landing__frame landing__frame--big">
-          <img src="assets/ana.png" alt="Big card">
-        </div>
+<section class="storyBlock" aria-label="Story block">
+  <div class="storyBlock__inner">
 
-        <!-- Lower text area (Ana) -->
-        <div class="landing__text landing__text--flushRight">
+    <div class="storyBlock__grid">
+      <!-- LEFT COLUMN: two stacked images -->
+      <div class="storyBlock__left">
+        <figure class="storyBlock__media storyBlock__media--big">
+          <img src="assets/tablet_draw.png" alt="Writing in notebook">
+        </figure>
 
-          <!-- ✅ from figma -->
-          <h3 class="landing__h">آنا</h3>
-
-          <!-- ✅ from figma -->
-          <p class="landing__p">
-            آنا تمثل الجانب الواعي والعملي من التجربة.<br>
-            هي معلمة ورائدة أعمال،<br>
-            ترى التعليم كمساحة فهم قبل أن يكون شرحًا،<br>
-            وترى ريادة الأعمال كتحويل واعٍ للفكرة إلى أثر.
-          </p>
-
-          <!-- ✅ from figma -->
-          <h4 class="landing__h2">آنا تعبر عن:</h4>
-          <ul class="landing__list">
-            <li>التعليم والتربية</li>
-            <li>العلاقة بين المعلمة والطالبة</li>
-            <li>ريادة الأعمال من منظور إنساني وتجريبي</li>
-          </ul>
-
-          <!-- ✅ from figma -->
-          <p class="landing__p">آنا = الفكرة حين تنضج</p>
-
-          <!-- ✅ from figma -->
-          <h4 class="landing__h2">العلاقة بين نهيرا وآنا</h4>
-
-          <!-- ✅ from figma -->
-          <p class="landing__p">
-            آنا ونهيرة ليستا شخصيتين منفصلتين،<br>
-            بل جانبان لرحلة واحدة،<br>
-            تعكسان تعدد المهارات والتجارب<br>
-            التي شكّلت مسار المؤلفة أنهار.
-          </p>
-        </div>
-
+        <figure class="storyBlock__media storyBlock__media--bottom">
+          <img src="assets/office_desk.png" alt="Office desk">
+        </figure>
       </div>
 
-      <!-- RIGHT COLUMN -->
-      <div class="landing__col landing__col--right">
+      <!-- RIGHT COLUMN: ALL TEXT + iPad image -->
+      <div class="storyBlock__right">
+        <h3 class="storyBlock__title">القصة تبدأ:</h3>
 
-        <!-- Pink framed image card -->
-        <div class="landing__frame landing__frame--pink">
-          <img src="assets/Nuhaira.png" alt="Pink card">
-        </div>
+        <p class="storyBlock__lead">
+          في عالم أنهار، تبدأ كل فكرة حكاية<br>
+          حكاية إنسان… تجربة… وسؤال عميق!<br>
+          لأن القصص هي أقرب طريق للفهم وأصدق<br>
+          وسيلة للتأثير!
+        </p>
 
-        <!-- Nuhaira text block -->
-        <div class="landing__text">
+        <figure class="storyBlock__media storyBlock__media--ipad">
+          <img src="assets/writing_hand.png" alt="Drawing on tablet">
+        </figure>
 
-          <!-- ✅ from figma -->
-          <h3 class="landing__h">نهيرا</h3>
+        <h4 class="storyBlock__sub">الإبداع:</h4>
+        <p class="storyBlock__p">
+          الإبداع هنا ليس مجرد تصميم جميل<br>
+          بل طريقة تفكير تحول القصة إلى رؤية<br>
+          والفكرة إلى تجربة بصرية متكاملة!
+        </p>
 
-          <!-- ✅ (you already had this correct) -->
-          <p class="landing__p">
-            نهيرا تمثل الجانب الإبداعي والإنساني من الرحلة.<br>
-            هي الطفلة التي ترى العالم بالخيال،<br>
-            وتعبّر عن ذاتها من خلال الرسم، والتصوير، والقصص،<br>
-            وتقدّم مفاهيم تطوير الذات بلغة بسيطة تناسب الطفل والمراهق.
-          </p>
-
-          <!-- ✅ from figma -->
-          <h4 class="landing__h2">نهيرا تعبر عن:</h4>
-          <ul class="landing__list">
-            <li>التعبير بالرسم والالوان</li>
-            <li>تطوير الذات بلغة قصصية</li>
-            <li>القراءة ويناء الوعي المبكر</li>
-          </ul>
-
-          <!-- ✅ from figma -->
-          <p class="landing__note">
-            <span class="landing__icon" aria-hidden="true">📅</span>
-            نهيرا لا تعلم.. بل تفتح باب الفهم
-          </p>
-
-          <!-- ✅ from figma -->
-          <h4 class="landing__h2">من هي آنا؟</h4>
-
-        </div>
-
-        <!-- Two stacked framed images -->
-        <div class="landing__frame landing__frame--mid">
-          <img src="assets/teacher.png" alt="Right card 1">
-        </div>
-
-        <div class="landing__frame landing__frame--mid">
-          <img src="assets/entrepneur.jpg" alt="Right card 2">
-        </div>
-
+        <h4 class="storyBlock__sub storyBlock__sub--green">من الإلهام إلى نتائج ملموسة</h4>
+        <p class="storyBlock__p">
+          من الإلهام إلى نتائج ملموسة…<br>
+          لتحول الإلهام إلى مشاريع قابلة للتطبيق<br>
+          تحمل معنى وتترك أثرًا!
+        </p>
       </div>
+    </div>
 
-    </section>
-
-    <!-- Bottom CTA -->
-    <section class="landing__cta">
-      <!-- ✅ from figma -->
-      <p class="landing__ctaTopText">
-        بين الإبداع والوعي،<br>
-        وبين الفكرة والتطبيق،<br>
-        تتشكل رسالة هذا المشروع.
-      </p>
-
-      <div class="landing__ctaActions">
-        <a class="btn btn--solid" href="#">Button</a>
-        <!-- ✅ from figma -->
-        <a class="btn btn--ghost" href="#">هنا تبدأ القصة وتستمر</a>
-      </div>
-    </section>
-
-    <footer class="landing__footer">
-      <div class="landing__footerLeft">
-        <p class="landing__footerTitle">تابعنا أيضًا هنا:</p>
-        <div class="landing__socials" dir="ltr">
-          <a href="#" aria-label="Instagram">◦</a>
-          <a href="#" aria-label="X">◦</a>
-          <a href="#" aria-label="YouTube">◦</a>
-          <a href="#" aria-label="TikTok">◦</a>
-        </div>
-      </div>
-
-      <div class="landing__footerRight">
-        <h3 class="landing__footerHeadline">الرحلة مازالت في بدايتها…</h3>
-      </div>
-    </footer>
+    <div class="storyBlock__actions">
+      <a class="btn btn--sage" href="#">اكتشف الرحلة</a>
+    </div>
 
   </div>
+</section>
+
+<!-- Footer -->
+<footer class="siteFooter" dir="rtl">
+  <div class="siteFooter__rule" aria-hidden="true"></div>
+
+  <div class="siteFooter__inner">
+    <!-- LEFT block (logo + small text + socials) -->
+    <div class="siteFooter__left">
+      <img class="siteFooter__logo" src="assets/logo.png" alt="AnharVerse" />
+
+      <p class="siteFooter__smallText">نلتقي أيضًا هنا..</p>
+
+      <div class="siteFooter__social" dir="ltr" aria-label="Social links">
+        <a class="siteFooter__icon" href="#" aria-label="Facebook">f</a>
+        <a class="siteFooter__icon" href="#" aria-label="LinkedIn">in</a>
+        <a class="siteFooter__icon" href="#" aria-label="YouTube">▶</a>
+        <a class="siteFooter__icon" href="#" aria-label="Instagram">◎</a>
+      </div>
+    </div>
+
+    <!-- RIGHT headline -->
+    <h3 class="siteFooter__headline">الرحلة مازالت في بدايتها...</h3>
+  </div>
+</footer>
+</main>
+
+  
 </body>
 </html>
