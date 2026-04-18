@@ -93,12 +93,11 @@
 
 .nowWorking__img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
   display: block;
   border-radius: 10px;
   box-shadow: 0 12px 28px rgba(0,0,0,.08);
   object-fit: cover;
-  max-height: 360px;
 }
 
 /* Products grid */

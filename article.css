@@ -68,7 +68,7 @@ body{
 .page{
   width: min(1100px, 92vw);
   margin: 0 auto;
-  padding: 42px 0 60px;
+  padding: 42px 28px 60px;
 }
 
 /* =========================================================
@@ -122,9 +122,9 @@ body{
 .block{
   direction: ltr;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 42px;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
 }
 
 /* Default text style inside blocks */
@@ -148,8 +148,10 @@ body{
 
 .block__media img{
   width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   display: block;
-  border-radius: 6px;
+  border-radius: 10px;
   box-shadow: 0 16px 40px rgba(0,0,0,0.08);
 }
 
@@ -215,39 +217,13 @@ body{
 }
 
 /* =========================================================
-   Row 1 (text LEFT, image RIGHT) – tuned to design
-========================================================= */
-.block--row1{
-  grid-template-columns: 1fr 1.25fr;
-}
-
-.block--row1 .block__text{
-  max-width: 520px;
-  justify-self: start;
-}
-
-.block--row1 .block__media{
-  justify-self: end;
-}
-
-.block--row1 .block__media img{
-  border-radius: 8px;
-}
-
-/* =========================================================
-   Row 2 (image LEFT, text RIGHT) – softer + narrower
+   Row 2 (image LEFT, text RIGHT)
 ========================================================= */
 .block--row2{
-  grid-template-columns: 1.25fr 1fr;
-}
-
-.block--row2 .block__media{
-  justify-self: start;
+  direction: ltr;
 }
 
 .block--row2 .block__text{
-  justify-self: end;
-  max-width: 520px;
   color: #6a6a6a;
   font-size: 15px;
   line-height: 2.0;
@@ -266,16 +242,9 @@ body{
 /* =========================================================
    Row 3 (poem LEFT, image RIGHT)
 ========================================================= */
-.block--row3{
-  grid-template-columns: 420px 1fr;
-  gap: 80px;
-  margin-top: 8px;
-}
-
 .block--row3 .block__text--poem{
-  max-width: 420px;
-  justify-self: start;
-  text-align: center;
+  text-align: right;
+  direction: rtl;
   color: #6a6a6a;
   font-size: 14px;
   line-height: 2.2;
@@ -289,66 +258,41 @@ body{
 }
 
 .block--row3 .poem__stanza{ margin: 0; }
-.block--row3 .poem__stanza + .poem__stanza{ margin-top: 46px; }
-
-.block--row3 .block__media{ justify-self: end; }
-
-.block--row3 .block__media img{
-  width: min(520px, 100%);
-  border-radius: 8px;
-}
+.block--row3 .poem__stanza + .poem__stanza{ margin-top: 36px; }
 
 /* =========================================================
-   Row 4 (image LEFT, centered text RIGHT)
+   Row 4 (image LEFT, text RIGHT)
 ========================================================= */
-.block--row4{
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
-}
-
-.block--row4 .block__media{ justify-self: start; }
-
-.block--row4 .block__media img{
-  width: 100%;
-  max-width: 460px;
-  border-radius: 10px;
-}
-
 .block--row4 .block__text--row4{
-  justify-self: end;
-  max-width: 520px;
-  text-align: center;
+  text-align: right;
+  direction: rtl;
   color: #6a6a6a;
   font-size: 14px;
   line-height: 2.15;
-  margin-right: 5vw;
-
-  /* still RTL text, even though centered */
-  direction: rtl;
 }
 
 .block--row4 .row4__title{
-  margin: 0 0 24px;
+  margin: 0 0 20px;
   font-weight: 600;
   font-size: 16px;
   color: #6a6a6a;
 }
 
 .block--row4 .row4__p{ margin: 0; }
-.block--row4 .row4__p + .row4__p{ margin-top: 22px; }
+.block--row4 .row4__p + .row4__p{ margin-top: 18px; }
 
-.block--row4 .row4__signature{ margin-top: 44px; }
+.block--row4 .row4__signature{ margin-top: 36px; }
 
 .block--row4 .row4__brand{
   font-size: 13px;
   font-weight: 600;
   color: #6a6a6a;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .block--row4 .row4__sigText{
   font-size: 13px;
-  line-height: 2.1;
+  line-height: 2.0;
   color: #6a6a6a;
 }
 
@@ -356,30 +300,12 @@ body{
    Responsive
 ========================================================= */
 @media (max-width: 900px){
-  .block,
-  .block--row1,
-  .block--row2,
-  .block--row3,
-  .block--row4{
+  .block{
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 20px;
   }
 
-  .topbar__inner{
-    grid-template-columns: 60px 1fr;
-    grid-template-rows: auto auto;
+  .block__media img{
+    aspect-ratio: 1 / 1;
   }
-
-  .topbar__cta{ justify-self: start; }
-
-  /* Let media and text stack naturally */
-  .block__media,
-  .block__text{
-    justify-self: stretch;
-    max-width: none;
-    text-align: right;
-  }
-
-  /* Keep poem centered on mobile */
-  .block--row3 .block__text--poem{ text-align: center; }
 }
