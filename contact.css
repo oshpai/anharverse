@@ -1,0 +1,231 @@
+/* ===== About page section (matches screenshot) ===== */
+
+:root{
+  --bg: #f3eee6;
+  --text: #3f3f3f;
+  --muted: #777777;
+  --line: rgba(40,40,40,.45);
+  --sage: #6f8f7d;
+  --sageDark: #4f6f5f;
+  --wrap: min(1100px, 92vw);
+}
+
+/* keep your existing header styles; only add/override below */
+
+.page{ background:#fff; }
+
+/* Whole section */
+.aboutPage{
+  background:#fff;
+}
+
+.aboutPage__inner{
+  width: var(--wrap);
+  margin: 0 auto;
+  padding: 26px 0 10px;
+}
+
+/* 2-column layout */
+.aboutPage__grid{
+  display: grid;
+  grid-template-columns: 420px 1fr; /* left card column, right text column */
+  gap: 44px;
+  align-items: start;
+}
+
+/* LEFT column */
+.aboutPage__left{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.aboutCardMedia{
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(0,0,0,.12);
+}
+.aboutCardMedia img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contact card */
+.contactCard{
+  background:#fff;
+}
+
+.contactCard__title{
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color:#2f2f2f;
+  margin: 10px 0 12px;
+}
+
+/* Form grid: 2 small fields, then full-width fields */
+.contactForm{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 14px;
+}
+
+.field{ display:flex; flex-direction:column; gap: 6px; }
+.field--full{ grid-column: 1 / -1; }
+
+.field__label{
+  font-size: 12px;
+  color:#6a6a6a;
+  font-weight: 600;
+}
+
+.field__input,
+.field__textarea{
+  border: 1px solid #ececec;
+  background: #fff;
+  border-radius: 4px;
+  padding: 10px 10px;
+  font-size: 12px;
+  color:#333;
+  outline: none;
+}
+
+.field__textarea{
+  resize: vertical;
+  line-height: 1.8;
+}
+
+.contactForm__submit{
+  grid-column: 1 / -1;
+  margin-top: 6px;
+  height: 42px;
+  border: none;
+  border-radius: 4px;
+  background: var(--sageDark);
+  color:#fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.contactForm__submit:hover{ opacity: .95; }
+
+/* RIGHT column */
+.aboutPage__right{
+  text-align: right;
+  padding-top: 8px;
+}
+
+.aboutPage__title{
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 800;
+  color:#111;
+  margin-bottom: 8px;
+}
+
+.aboutPage__meta{
+  color: #7a7a7a;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.aboutPage__body p{
+  color: #3f3f3f;
+  font-size: 13px;
+  line-height: 2.0;
+  margin-bottom: 16px;
+}
+
+.aboutPage__question{
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.aboutPage__closing{
+  color:#333;
+}
+
+/* Divider above footer strip */
+.aboutPage__rule{
+  width: 100%;
+  height: 1px;
+  background: rgba(0,0,0,.12);
+  margin-top: 18px;
+}
+
+/* Footer strip (the bottom white strip) */
+.stripFooter{
+  background:#fff;
+}
+
+.stripFooter__inner{
+  width: var(--wrap);
+  margin: 0 auto;
+  padding: 26px 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.stripFooter__headline{
+  color: var(--sage);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stripFooter__left{
+  display:flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stripFooter__mark{
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  opacity: .9;
+}
+
+.stripFooter__small{
+  color: #7a7a7a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stripFooter__social{
+  display:flex;
+  gap: 10px;
+}
+
+.stripFooter__social a{
+  width: 22px;
+  height: 22px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:#6b6b6b;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .aboutPage__grid{
+    grid-template-columns: 1fr;
+  }
+  .aboutPage__right{
+    order: 1;
+  }
+  .aboutPage__left{
+    order: 2;
+  }
+  .stripFooter__inner{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}                                                                                        
