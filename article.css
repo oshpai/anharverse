@@ -272,9 +272,16 @@ body{
 }
 
 .block--row4 .row4__title{
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #4f6f5f;
+}
+
+.block--row4 .row4__sub{
   margin: 0 0 20px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   color: #6a6a6a;
 }
 

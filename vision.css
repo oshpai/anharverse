@@ -114,11 +114,18 @@
 }
 
 .products__heading {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  color: #3f3f3f;
-  margin-bottom: 28px;
+  color: #4f6f5f;
+  margin-bottom: 12px;
   line-height: 1.6;
+}
+
+.products__subheading {
+  font-size: 14px;
+  color: #6a6a6a;
+  line-height: 2.0;
+  margin-bottom: 28px;
 }
 
 .products__grid {
