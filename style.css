@@ -123,16 +123,22 @@
     margin-bottom: 48px;
   }
 
-  /* Each section becomes a two-column grid */
+  /* Each section becomes a two-column grid.
+     Image column is narrower (1fr), text column is wider (2fr).
+     Columns swap per alternation so image is always the smaller side. */
   .discoverSection {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;   /* even: image col1 (narrow), text col2 (wide) */
     grid-template-rows: auto 1fr;
     column-gap: 52px;
     align-items: start;
     margin-bottom: 0;
     padding: 44px 0;
     border-top: 1px solid #f0ede8;
+  }
+
+  .discoverSection:nth-child(odd) {
+    grid-template-columns: 2fr 1fr;   /* odd: text col1 (wide), image col2 (narrow) */
   }
 
   /* Title spans full width */
