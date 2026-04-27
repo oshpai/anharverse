@@ -1,318 +1,199 @@
-/* =========================================================
-   Base / Reset
-========================================================= */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
+/* ===================================================
+   article.css  —  المقالات  (mobile-first)
+=================================================== */
 
-body{
-  background: #faf9f7;
-  color: #1b1b1b;
-  font-family: "Cairo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.9;
+:root {
+  --sage:     #6f8f7d;
+  --sageDark: #4f6f5f;
+  --wrap:     min(680px, 92vw);
 }
 
-/* =========================================================
-   Topbar
-========================================================= */
-.topbar{ background: #f5f3ee; }
+.page { background: #fff; }
 
-.topbar__inner{
-  width: min(1100px, 92vw);
+/* ---- Outer wrapper ---- */
+.articlePage {
+  background: #fff;
+}
+
+.articlePage__inner {
+  width: var(--wrap);
   margin: 0 auto;
-  padding: 16px 0;
-  display: grid;
-  grid-template-columns: 60px 1fr auto;
-  align-items: center;
-  gap: 16px;
-}
-
-.topbar__logo{
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-}
-
-.topbar__nav{
-  display: flex;
-  justify-content: flex-end;
-  gap: 26px;
-  font-weight: 500;
-  color: #2a2a2a;
-}
-
-.topbar__nav a{
-  text-decoration: none;
-  color: inherit;
-  opacity: 0.9;
-}
-.topbar__nav a:hover{ opacity: 0.7; }
-
-.topbar__cta{
-  text-decoration: none;
-  background: #6f8f7d;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.topbar__rule{
-  height: 2px;
-  background: rgba(40, 40, 40, 0.25);
-}
-
-/* =========================================================
-   Page
-========================================================= */
-.page{
-  width: min(1100px, 92vw);
-  margin: 0 auto;
-  padding: 42px 28px 60px;
-}
-
-/* =========================================================
-   Title
-========================================================= */
-.page__title{
-  text-align: center;
-  margin-top: 18px;
-  margin-bottom: 30px;
-}
-
-.page__title h1{
-  font-size: clamp(28px, 3vw, 40px);
-  line-height: 1.2;
-  font-weight: 600;
-  color: #4f6f5f;
-}
-
-.page__title p{
-  margin-top: 10px;
-  color: #6a6a6a;
-  font-size: 16px;
-}
-
-/* Right-aligned title variant */
-.page__title--right{
-  width: 100%;
-  direction: rtl;
-  text-align: right;
+  padding: 36px 0 48px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  text-align: right;
 }
 
-.page__title--right .page__titleH1,
-.page__title--right .page__titleP{
+/* ---- Page title ---- */
+.articlePage__title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 32px;
+  line-height: 1.4;
+}
+
+/* ---- Blocks ---- */
+.articleBlock {
+  margin-bottom: 44px;
+}
+
+/* ---- Headings that appear above the image ---- */
+.articleBlock__heading--standalone {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sageDark);
+  margin-bottom: 18px;
+}
+
+/* ---- Images (mobile: full width) ---- */
+.articleBlock__figure {
+  margin: 0 0 20px;
+}
+
+.articleBlock__img {
+  width: 100%;
   display: block;
-  width: 100%;
-}
-
-/* =========================================================
-   Content + Base Block Layout
-========================================================= */
-.content{
-  display: flex;
-  flex-direction: column;
-  gap: 54px;
-}
-
-/* Lock grid ordering (LTR) while allowing RTL text inside .block__text */
-.block{
-  direction: ltr;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-}
-
-/* Default text style inside blocks */
-.block__text{
-  direction: rtl;
-  text-align: right;
-  color: #5b5b5b;
-  font-size: 14px;
-}
-
-.block__text p + p{ margin-top: 16px; }
-
-.block__subhead{
-  font-family: "Cairo", system-ui, sans-serif;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 1.2;
-  color: #1b1b1b;
-  margin-bottom: 10px;
-}
-
-.block__media img{
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  border-radius: 10px;
   object-fit: cover;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 28px rgba(0,0,0,.10);
 }
 
-/* =========================================================
-   Signature (generic)
-========================================================= */
-.signature{
-  margin-top: 18px;
-  color: #7a7a7a;
-  font-size: 13px;
+/* ---- Body text ---- */
+.articleBlock__body p {
+  font-size: 14px;
+  color: #3f3f3f;
+  line-height: 2.1;
+  margin-bottom: 16px;
 }
 
-/* =========================================================
-   Footer
-========================================================= */
-.footer{
-  background: #f5f3ee;
-  border-top: 1px solid rgba(0,0,0,0.08);
+.articleBlock__lead {
+  font-size: 15px !important;
+  font-weight: 600;
+  color: #2f2f2f !important;
 }
 
-.footer__inner{
-  width: min(1100px, 92vw);
-  margin: 0 auto;
-  padding: 26px 0 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
+.articleBlock__heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sageDark);
+  margin-bottom: 16px;
+  line-height: 1.3;
 }
 
-.footer__logo{
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-.footer__title{
+.articleBlock__subheading {
   font-size: 16px;
   font-weight: 600;
-  color: #4f6f5f;
-  margin-bottom: 10px;
-}
-
-.footer__social a{
-  display: inline-flex;
-  width: 28px;
-  height: 28px;
-  border-radius: 9px;
-  border: 1px solid rgba(0,0,0,0.18);
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: #4f6f5f;
-  margin-left: 8px;
-}
-
-.footer__headline{
-  font-size: 18px;
-  font-weight: 600;
-  color: #4f6f5f;
-}
-
-/* =========================================================
-   Row 2 (image LEFT, text RIGHT)
-========================================================= */
-.block--row2{
-  direction: ltr;
-}
-
-.block--row2 .block__text{
-  color: #6a6a6a;
-  font-size: 15px;
-  line-height: 2.0;
-}
-
-.block--row2 .block__text p + p{ margin-top: 18px; }
-
-.block--row2 .block__subhead{
-  font-family: "Cairo", system-ui, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  color: #6a6a6a;
+  color: #3f3f3f;
   margin-bottom: 14px;
 }
 
-/* =========================================================
-   Row 3 (poem LEFT, image RIGHT)
-========================================================= */
-.block--row3 .block__text--poem{
-  text-align: right;
-  direction: rtl;
-  color: #6a6a6a;
-  font-size: 14px;
-  line-height: 2.2;
+/* ---- Signature block ---- */
+.articleBlock__signature {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #f0ede8;
 }
 
-.block--row3 .poem__title{
+.articleBlock__brand {
+  display: block;
   font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 22px;
-  color: #6a6a6a;
-}
-
-.block--row3 .poem__stanza{ margin: 0; }
-.block--row3 .poem__stanza + .poem__stanza{ margin-top: 36px; }
-
-/* =========================================================
-   Row 4 (image LEFT, text RIGHT)
-========================================================= */
-.block--row4 .block__text--row4{
-  text-align: right;
-  direction: rtl;
-  color: #6a6a6a;
-  font-size: 14px;
-  line-height: 2.15;
-}
-
-.block--row4 .row4__title{
-  margin: 0 0 8px;
   font-weight: 700;
-  font-size: 18px;
-  color: #4f6f5f;
-}
-
-.block--row4 .row4__sub{
-  margin: 0 0 20px;
-  font-weight: 600;
-  font-size: 15px;
-  color: #6a6a6a;
-}
-
-.block--row4 .row4__p{ margin: 0; }
-.block--row4 .row4__p + .row4__p{ margin-top: 18px; }
-
-.block--row4 .row4__signature{ margin-top: 36px; }
-
-.block--row4 .row4__brand{
-  font-size: 13px;
-  font-weight: 600;
-  color: #6a6a6a;
+  color: var(--sage);
   margin-bottom: 8px;
+  letter-spacing: 0.04em;
 }
 
-.block--row4 .row4__sigText{
-  font-size: 13px;
-  line-height: 2.0;
-  color: #6a6a6a;
+.articleBlock__signature p {
+  font-size: 13px !important;
+  color: #7a7a7a !important;
+  line-height: 2.0 !important;
 }
 
-/* =========================================================
-   Responsive
-========================================================= */
-@media (max-width: 900px){
-  .block{
-    grid-template-columns: 1fr;
-    gap: 20px;
+/* ===================================================
+   Desktop (≥ 860px) — square images, alternating sides
+=================================================== */
+@media (min-width: 860px) {
+
+  :root {
+    --wrap: min(1100px, 92vw);
   }
 
-  .block__media img{
+  .articlePage__inner {
+    padding: 52px 0 64px;
+  }
+
+  .articlePage__title {
+    font-size: 32px;
+    margin-bottom: 48px;
+  }
+
+  /* Each block: two-column grid */
+  .articleBlock {
+    display: grid;
+    grid-template-columns: 1fr 2fr;   /* even blocks: image col1 (narrow), text col2 (wide) */
+    grid-template-rows: auto 1fr;
+    column-gap: 52px;
+    align-items: start;
+    margin-bottom: 0;
+    padding: 44px 0;
+    border-top: 1px solid #f0ede8;
+  }
+
+  .articleBlock:nth-child(odd) {
+    grid-template-columns: 2fr 1fr;   /* odd blocks: text col1 (wide), image col2 (narrow) */
+  }
+
+  /* Standalone headings (blocks 4 & 5) span full width above image */
+  .articleBlock__heading--standalone {
+    grid-column: 1 / -1;
+    font-size: 22px;
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #f0ede8;
+  }
+
+  /* Square images */
+  .articleBlock__img {
     aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Even blocks: image col1, text col2 */
+  .articleBlock:nth-child(even) .articleBlock__figure {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .articleBlock:nth-child(even) .articleBlock__body {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  /* Odd blocks: text col1, image col2 */
+  .articleBlock:nth-child(odd) .articleBlock__figure {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .articleBlock:nth-child(odd) .articleBlock__body {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /* Blocks 4 & 5 have a standalone heading (row 1 spans full width) */
+  .articleBlock:nth-child(even) .articleBlock__heading--standalone {
+    grid-row: 1;
+  }
+
+  .articleBlock:nth-child(odd) .articleBlock__heading--standalone {
+    grid-row: 1;
+  }
+
+  .articleBlock__body p {
+    font-size: 15px;
   }
 }
