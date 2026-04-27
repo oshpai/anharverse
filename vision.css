@@ -33,7 +33,7 @@
   line-height: 1.2;
 }
 
-/* ---- Images ---- */
+/* ---- Images (mobile: full width) ---- */
 .visionPage__figure {
   margin: 0 0 22px;
 }
@@ -75,6 +75,106 @@
 }
 
 /* ===================================================
-   Desktop adaptation (≥ 900 px)
-   (fill in later once mobile is approved)
+   Desktop (≥ 860px)
 =================================================== */
+@media (min-width: 860px) {
+
+  :root {
+    --wrap: min(1100px, 92vw);
+  }
+
+  .visionPage__inner {
+    padding: 52px 0 64px;
+    gap: 0;
+  }
+
+  .visionPage__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  /* --- Intro block: image left, text right --- */
+  .visionPage__intro {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 52px;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+
+  .visionPage__intro .visionPage__figure {
+    margin: 0;
+  }
+
+  .visionPage__img {
+    aspect-ratio: 3 / 4;
+    height: 380px;
+    width: 100%;
+  }
+
+  .visionPage__intro .visionPage__body {
+    padding-right: 8px;
+  }
+
+  .visionPage__body p {
+    font-size: 15px;
+  }
+
+  /* --- Sections: alternating image/text --- */
+  .visionSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 52px;
+    row-gap: 0;
+    align-items: start;
+    margin-top: 0;
+    padding: 48px 0;
+    border-top: 1px solid #f0ede8;
+  }
+
+  /* Section title spans full width above the grid */
+  .visionSection__title {
+    grid-column: 1 / -1;
+    font-size: 24px;
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0ede8;
+  }
+
+  /* Section 1 (ما نعمل): image right, text left */
+  .visionSection:nth-of-type(1) .visionPage__figure {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .visionSection:nth-of-type(1) .visionSection__body {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /* Section 2 (رؤية الأعمال): image left, text right */
+  .visionSection:nth-of-type(2) .visionPage__figure {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .visionSection:nth-of-type(2) .visionSection__body {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  /* Constrain image height in sections */
+  .visionSection .visionPage__img {
+    aspect-ratio: unset;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .visionSection__body p {
+    font-size: 15px;
+  }
+}
