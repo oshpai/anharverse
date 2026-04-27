@@ -95,6 +95,87 @@
 }
 
 /* ===================================================
-   Desktop — two-column adaptation (≥ 900 px)
-   (fill in later once mobile is approved)
+   Desktop (≥ 860px) — square images, side by side
 =================================================== */
+@media (min-width: 860px) {
+
+  :root {
+    --wrap: min(1100px, 92vw);
+  }
+
+  .aboutAnhar__inner {
+    padding: 52px 0 64px;
+  }
+
+  .aboutAnhar__title {
+    font-size: 36px;
+    margin-bottom: 48px;
+  }
+
+  /* Bio pair: about1 image (narrow) left, text (wide) right */
+  .aboutAnhar__bioPair {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 52px;
+    align-items: start;
+    padding: 44px 0;
+    border-top: 1px solid #f0ede8;
+  }
+
+  .aboutAnhar__bioPair .aboutAnhar__figure {
+    margin: 0;
+  }
+
+  .aboutAnhar__bioPair .aboutAnhar__img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .aboutAnhar__bioText p {
+    font-size: 15px;
+  }
+
+  /* Why AnharVerse: title full-width, then text (wide) left, about2 image (narrow) right */
+  .whyAnhar {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 52px;
+    align-items: start;
+    margin-top: 0;
+    padding: 44px 0;
+    border-top: 1px solid #f0ede8;
+  }
+
+  .whyAnhar__title {
+    grid-column: 1 / -1;
+    font-size: 26px;
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #f0ede8;
+  }
+
+  .whyAnhar .aboutAnhar__figure {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .whyAnhar .aboutAnhar__img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .whyAnhar__body {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .whyAnhar__body p {
+    font-size: 15px;
+  }
+
+  .aboutAnhar__copyright {
+    margin-top: 52px;
+  }
+}

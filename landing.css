@@ -16,7 +16,7 @@ body{
 }
 
 .top{
-  background: var(--bg);
+  background: #6f8f7a;
 }
 
 /* top bar */
@@ -40,11 +40,11 @@ body{
 /* pill button */
 .top__btn{
   text-decoration: none;
-  background: var(--sage);
-  color: #fff;
+  background: #fff;
+  color: #4f6f5f;
   padding: 10px 18px;
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 13px;
   line-height: 1;
 }
@@ -52,12 +52,12 @@ body{
 /* links */
 .top__link{
   text-decoration: none;
-  color: #2f2f2f;
+  color: #fff;
   font-weight: 500;
   font-size: 13px;
-  opacity: .95;
+  opacity: .90;
 }
-.top__link:hover{ opacity: .75; }
+.top__link:hover{ opacity: .65; }
 
 /* logo on far left */
 .top__brand{
@@ -74,7 +74,7 @@ body{
 /* divider line */
 .top__rule{
   height: 1px;
-  background: var(--line);
+  background: rgba(255,255,255,.25);
   width: 100%;
 }
 
