@@ -10,15 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="contact.css" />
   <link rel="stylesheet" href="landing.css" />
+  <link rel="stylesheet" href="contact.css" />
 </head>
 <body>
 
-  <!-- Top bar -->
   <header class="top">
     <div class="top__inner">
-      <!-- Right side (RTL start): pill button + links -->
       <nav class="top__nav" aria-label="Main">
         <a class="top__btn" href="about.html">تعرّف على</a>
         <a class="top__link" href="contact.html">عن أنهار</a>
@@ -28,131 +26,129 @@
         <a class="top__link" href="index.html">الرئيسية</a>
       </nav>
 
-      <!-- Left side logo -->
-      <a class="top__brand" href="#" aria-label="AnharVerse">
-        <!-- Replace src with your mark -->
-        <img class="top__logo" src="assets/logo.png" alt="">
+      <a class="top__brand" href="index.html" aria-label="AnharVerse">
+        <img class="top__logo" src="assets/logo.png" alt="AnharVerse">
       </a>
     </div>
+    <div class="top__rule"></div>
   </header>
 
-  <!-- Main white area -->                                          
   <main class="page">
 
-    <section class="aboutPage">
-      <div class="aboutPage__inner">
+    <article class="aboutAnhar">
+      <div class="aboutAnhar__inner">
 
-        <div class="aboutPage__grid">
+        <!-- Page title -->
+        <h1 class="aboutAnhar__title">عن أنهار</h1>
 
-          <!-- LEFT: image + contact form -->
-          <aside class="aboutPage__left">
+        <!-- about1: portrait image -->
+        <figure class="aboutAnhar__figure">
+          <img class="aboutAnhar__img" src="assets/about1.jpg" alt="أنهار">
+        </figure>
 
-            <figure class="aboutCardMedia">
-              <img src="assets/anharverseportrait.jpg" alt="Anhar writing at a desk">
-            </figure>
+        <!-- Tagline -->
+        <p class="aboutAnhar__meta">مؤلفة، رسامة، مصممة، معلمة، ورائدة أعمال</p>
 
-            <div class="contactCard">
-              <h3 class="contactCard__title">سعيدة بتواصلكم</h3>
+        <!-- Bio -->
+        <div class="aboutAnhar__bio">
+          <p>
+            تشكّلت رؤيتي عبر رحلة طويلة من التجربة والاستكشاف.
+            قادني الإيمان إلى الوعي… لأمنح كل شيءٍ هوية عبر الفهم والتجربة.
+          </p>
 
-              <form class="contactForm">
-                <div class="field">
-                  <label class="field__label" for="name">الاسم</label>
-                  <input class="field__input" id="name" name="name" type="text" placeholder="أنهار">
-                </div>
+          <p>
+            تخصصت في اللغة الإنجليزية، ومع ذلك كان اهتمامي في مسارات إنسانية أكثر عمقًا:
+            التعليم والتربية، منظور وعي الإنسان قبل المنهج، والطلبة قبل التقييم.
+          </p>
 
-                <div class="field">
-                  <label class="field__label" for="family">العائلة</label>
-                  <input class="field__input" id="family" name="family" type="text" placeholder="آل مها">
-                </div>
+          <p>
+            إلى جانب التعليم… خضت تجربة ريادة الأعمال من خلال أفكار ومشاريع حقيقية.
+            بدأت من الإيمان بالفكرة، ومحاولة تحويلها إلى واقع، ثم التوقف أحيانًا لإعادة الفهم والتعلّم.
+          </p>
 
-                <div class="field field--full">
-                  <label class="field__label" for="email">عنوان البريد الإلكتروني</label>
-                  <input class="field__input" id="email" name="email" type="email" placeholder="anharverse@gmail.com">
-                </div>
+          <p>
+            لكن ريادة الأعمال بالنسبة لي ليست "سعياً للنتائج"، بل رحلة لفهم أعمق:<br>
+            كيف تولد الفكرة؟<br>
+            وكيف تنضج؟<br>
+            وكيف قد لا تكتمل…؟!<br>
+            لكنها تترك وعياً لا يضيع.
+          </p>
 
-                <div class="field field--full">
-                  <label class="field__label" for="msg">رسالتي</label>
-                  <textarea class="field__textarea" id="msg" name="msg" rows="5"
-                    placeholder="هذا الموقع ليس لعرض إنجازات...&#10;بل لمشاركة رحلة...&#10;وتحويل الإلهام إلى أثرٍ ومعنى..."></textarea>
-                </div>
+          <p>
+            من هذه التجارب وُلد عالم أنهار — AnharVerse —
+            وتشكّلت شخصيتا نهيرة وآنا، كامتداد لتعدد المهارات والتجارب الإنسانية،
+            فهما جانبين لرحلة واحدة… ما زالت تُكتب.
+          </p>
 
-                <button class="contactForm__submit" type="submit">Submit</button>
-              </form>
-            </div>
-
-          </aside>
-
-          <!-- RIGHT: text -->
-          <article class="aboutPage__right">
-            <h1 class="aboutPage__title">عن أنهار</h1>
-            <p class="aboutPage__meta">مؤلفة، رسامة، مصممة، معلمة، ورائدة أعمال</p>
-
-            <div class=”aboutPage__body”>
-              <p>
-                تشكّلت رؤيتي عبر رحلة طويلة من التجربة والاستكشاف.
-                قادني الإيمان إلى الوعي… لأمنح كل شيءٍ هوية عبر الفهم والتجربة.
-              </p>
-
-              <p>
-                تخصصت في اللغة الإنجليزية، ومع ذلك كان اهتمامي في مسارات إنسانية أكثر عمقًا:
-                التعليم والتربية، منظور وعي الإنسان قبل المنهج، والطلبة قبل التقييم.
-              </p>
-
-              <p>
-                إلى جانب التعليم… خضت تجربة ريادة الأعمال من خلال أفكار ومشاريع حقيقية.
-                بدأت من الإيمان بالفكرة، ومحاولة تحويلها إلى واقع، ثم التوقف أحيانًا لإعادة الفهم والتعلّم.
-              </p>
-
-              <p class=”aboutPage__question”>
-                لكن ريادة الأعمال بالنسبة لي ليست “سعياً للنتائج”، بل رحلة لفهم أعمق:
-                كيف تولد الفكرة؟
-                وكيف تنضج؟
-                وكيف قد لا تكتمل…؟!
-                لكنها تترك وعياً لا يضيع.
-              </p>
-
-              <p>
-                من هذه التجارب وُلد عالم أنهار
-                AnharVerse
-                وتشكّلت شخصيتا نهيرة وآنا، كامتداد لتعدد المهارات والتجارب الإنسانية،
-                فهما جانبين لرحلة واحدة… ما زالت تُكتب.
-              </p>
-
-              <p class=”aboutPage__closing”>
-                نهيرة وآنا هما جزء من هذه الرحلة.<br>
-                هما انعكاس لتعدد التجربة بداخلي.<br>
-                أما القصة… فما زالت تُكتب.
-              </p>
-            </div>
-          </article>
-
+          <p>
+            نهيرة وآنا هما جزء من هذه الرحلة.<br>
+            هما انعكاس لتعدد التجربة بداخلي.<br>
+            أما القصة… فما زالت تُكتب.
+          </p>
         </div>
 
-      </div>
+        <!-- Why AnharVerse section -->
+        <section class="whyAnhar">
 
-      <div class="aboutPage__rule"></div>
+          <h2 class="whyAnhar__title">لماذا عالم أنهار؟</h2>
 
-      <!-- Footer strip -->
-      <footer class="stripFooter">
-        <div class="stripFooter__inner">
-          <div class="stripFooter__left">
-            <img class="stripFooter__mark" src="assets/logo.png" alt="">
-            <p class="stripFooter__small">نلتقي أيضًا هنا..</p>
-            <div class="stripFooter__social" dir="ltr">
-              <a href="#" aria-label="Facebook">●</a>
-              <a href="#" aria-label="LinkedIn">●</a>
-              <a href="#" aria-label="YouTube">●</a>
-              <a href="#" aria-label="Instagram">●</a>
-            </div>
+          <!-- about2: philosophy image -->
+          <figure class="aboutAnhar__figure">
+            <img class="aboutAnhar__img" src="assets/about2.jpg" alt="عالم أنهار">
+          </figure>
+
+          <div class="whyAnhar__body">
+            <p>
+              لأن الأنهار لا تُسرع لتصل،<br>
+              بل تمضي بهدوءٍ في مسارها الطبيعي،<br>
+              تتشكل ملامحها من الطريق،<br>
+              وتجمع في مجراها الحياة والمعنى والتجربة.
+            </p>
+
+            <p>
+              وهكذا هو عالم أنهار —<br>
+              رحلةٌ هادئة بين الفكرة والوعي،<br>
+              يتحوّل فيها الإبداع إلى وسيلةٍ للفهم،<br>
+              والتعليم إلى طريقٍ لاكتشاف الذات.
+            </p>
+
+            <p>
+              إنه عالمٌ يمضي باتزانٍ يشبه الحكمة،<br>
+              ويؤمن أن الأثر الحقيقي لا يُصنع بالعجلة،<br>
+              بل بالصدق، والنية، والوعي الذي يوجّه كل فكرةٍ نحو غايتها.
+            </p>
           </div>
 
-          <h3 class="stripFooter__headline">الرحلة مازالت في بدايتها...</h3>
-        </div>
-      </footer>
+        </section>
 
-    </section>
+        <!-- Copyright -->
+        <p class="aboutAnhar__copyright">
+          عالم أنهار | يُمنع إعادة نشر أو اقتباس النصوص والصور دون إذن مسبق ©2025
+        </p>
+
+      </div>
+    </article>
 
   </main>
+
+  <footer class="siteFooter" dir="rtl">
+    <div class="siteFooter__rule" aria-hidden="true"></div>
+
+    <div class="siteFooter__inner">
+      <div class="siteFooter__left">
+        <img class="siteFooter__logo" src="assets/logo.png" alt="AnharVerse" />
+        <p class="siteFooter__smallText">نلتقي أيضًا هنا..</p>
+        <div class="siteFooter__social" dir="ltr" aria-label="روابط التواصل الاجتماعي">
+          <a class="siteFooter__icon" href="#" aria-label="Facebook">f</a>
+          <a class="siteFooter__icon" href="#" aria-label="LinkedIn">in</a>
+          <a class="siteFooter__icon" href="#" aria-label="YouTube">▶</a>
+          <a class="siteFooter__icon" href="#" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+
+      <h3 class="siteFooter__headline">الرحلة مازالت في بدايتها...</h3>
+    </div>
+  </footer>
 
 </body>
 </html>
