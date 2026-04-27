@@ -9,178 +9,188 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="landing.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="hero" aria-label="Landing hero">
-    <div class="hero__overlay"></div>
+  <header class="top">
+    <div class="top__inner">
+      <nav class="top__nav" aria-label="Main">
+        <a class="top__btn" href="about.html">تعرّف على</a>
+        <a class="top__link" href="contact.html">عن أنهار</a>
+        <a class="top__link" href="vision.html">الرؤية</a>
+        <a class="top__link" href="about.html">اكتشف</a>
+        <a class="top__link" href="article.html">المقالات</a>
+        <a class="top__link" href="index.html">الرئيسية</a>
+      </nav>
 
-    <nav class="nav">
-      <a class="brand" href="#">
-        <img class="brand__logo" src="assets/logo.png" alt="AnharVerse logo" />
-        <span class="brand__name">AnharVerse</span>
+      <a class="top__brand" href="index.html" aria-label="AnharVerse">
+        <img class="top__logo" src="assets/logo.png" alt="AnharVerse">
       </a>
-
-      <ul class="nav__links">
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="article.html">المقالات</a></li>
-        <li><a href="about.html">اكتشف</a></li>
-        <li><a href="vision.html">الرؤية</a></li>
-        <li><a href="contact.html">عن أنهار</a></li>
-      </ul>
-
-      <a class="btn btn--outline" href="about.html">تعرّف على</a>
-    </nav>
-
-    <main class="hero__content">
-      <h1 class="hero__title">AnharVerse</h1>
-      <p class="hero__subtitle">where ideas become awareness</p>
-      <a class="btn btn--solid" href="#">Button</a>
-    </main>
+    </div>
+    <div class="top__rule"></div>
   </header>
 
-  <!-- ===== Rest of landing page ===== -->
-  <div class="landing" dir="rtl">
+  <main class="page">
 
-    <section class="landing__grid">
+    <article class="discoverPage">
+      <div class="discoverPage__inner">
 
-      <!-- LEFT COLUMN -->
-      <div class="landing__col landing__col--left">
+        <!-- Page title -->
+        <h1 class="discoverPage__pageTitle">صفحة اكتشف</h1>
 
-        <!-- Top Arabic paragraph (centered) -->
-        <div class="landing__text landing__text--center">
-          <!-- ✅ from figma -->
-          <h3 class="landing__introTitle">حين تتجسد الفكرة في شخصيات</h3>
+        <!-- ── Section 1: Intro ── -->
+        <section class="discoverSection">
 
-          <p class="landing__introBody landing__introBody--right">
-            لم تولد نهيرا وآنا كشخصيتين منفصلتين،<br>
-            بل كامتداد لتجربةٍ واحدةٍ نمت فيها المهارات،<br>
-            وتشكّل الوعي عبر سنواتٍ من البحث والتعلّم.<br>
-            هما الوجهان المختلفان لرحلةٍ واحدة — رحلة أنهار.
-          </p>
-        </div>
+          <h2 class="discoverSection__title">حين تتجسد الفكرة في شخصيات</h2>
 
-        <!-- Illustration (reading) -->
-        <img class="landing__img landing__img--plain"
-             src="assets/anharversereading.png"
-             alt="Reading illustration">
+          <figure class="discoverSection__figure">
+            <img class="discoverSection__img" src="assets/discover1.png" alt="حين تتجسد الفكرة في شخصيات">
+          </figure>
 
-        <!-- Big framed image card -->
-        <div class="landing__frame landing__frame--big">
-          <img src="assets/anharversegreen2.png" alt="Big card">
-        </div>
+          <div class="discoverSection__body">
+            <p>
+              لم تولد نهيرا وآنا كشخصيتين منفصلتين،<br>
+              بل كامتدادٍ لتجربةٍ واحدةٍ نمت فيها المهارات،<br>
+              وتشكّل الوعي عبر سنواتٍ من البحث والتعلّم.<br>
+              هما الوجهان المختلفان لرحلةٍ واحدة —<br>
+              رحلة أنهار.
+            </p>
+          </div>
 
-        <!-- Lower text area (Ana) -->
-        <div class="landing__text landing__text--flushRight">
+        </section>
 
-          <h3 class="landing__h">آنا – الفكرة حين تنضج</h3>
+        <!-- ── Section 2: نهيرا intro ── -->
+        <section class="discoverSection">
 
-          <p class="landing__p">
-            آنا تمثل الجانب الواعي والعملي من التجربة.<br>
-            هي معلمة ورائدة أعمال،<br>
-            ترى التعليم مساحةً للفهم قبل أن يكون شرحًا،<br>
-            وترى ريادة الأعمال كتحويلٍ واعٍ للفكرة إلى أثرٍ ملموس.
-          </p>
+          <h2 class="discoverSection__title">نهيرا – الإبداع يبدأ من الخيال</h2>
 
-          <h4 class="landing__h2">آنا تعبّر عن:</h4>
-          <ul class="landing__list">
-            <li>التعليم والتربية</li>
-            <li>العلاقة بين المعلمة والطالبة</li>
-            <li>ريادة الأعمال من منظورٍ إنساني وتجريبي</li>
-          </ul>
+          <figure class="discoverSection__figure">
+            <img class="discoverSection__img" src="assets/discover2.jpg" alt="نهيرا">
+          </figure>
 
-          <p class="landing__p">🌱 آنا هي الفكرة حين تنضج وتتحول إلى أثر.</p>
+          <div class="discoverSection__body">
+            <p>
+              نهيرا تمثل الجانب الإبداعي والإنساني من الرحلة.<br>
+              هي الطفلة التي ترى العالم بعين الخيال،<br>
+              وتعبّر عن ذاتها من خلال الرسم، والتصوير، والقصص.<br>
+              تقدّم مفاهيم تطوير الذات بلغةٍ بسيطة قريبة من القلب،<br>
+              تناسب الطفل والمراهق في آنٍ واحد.
+            </p>
+          </div>
 
-          <h4 class="landing__h2">العلاقة بين نهيرا وآنا</h4>
+        </section>
 
-          <p class="landing__p">
-            نهيرا وآنا ليستا شخصيتين منفصلتين،<br>
-            بل وجهان لرحلةٍ واحدةٍ تعكسان تعدد المهارات والتجارب<br>
-            التي شكّلت مسار المؤلفة أنهار.<br>
-            فبين الإبداع والوعي، وبين الفكرة والتطبيق، تتشكل رسالة هذا المشروع.
-          </p>
-        </div>
+        <!-- ── Section 3: نهيرا تعبّر عن ── -->
+        <section class="discoverSection">
+
+          <h2 class="discoverSection__title">نهيرا تعبّر عن</h2>
+
+          <figure class="discoverSection__figure">
+            <img class="discoverSection__img" src="assets/discover3.jpg" alt="نهيرا تعبّر عن">
+          </figure>
+
+          <div class="discoverSection__body">
+            <ul class="discoverSection__list">
+              <li>التعبير بالرسم والألوان</li>
+              <li>تطوير الذات بلغةٍ قصصية</li>
+              <li>القراءة وبناء الوعي المبكر</li>
+            </ul>
+            <p class="discoverSection__note">نهيرا لا تُعلّم… بل تفتح باب الفهم.</p>
+          </div>
+
+        </section>
+
+        <!-- ── Section 4: آنا intro ── -->
+        <section class="discoverSection">
+
+          <h2 class="discoverSection__title">آنا – الفكرة حين تنضج</h2>
+
+          <figure class="discoverSection__figure">
+            <img class="discoverSection__img" src="assets/discover4.jpg" alt="آنا">
+          </figure>
+
+          <div class="discoverSection__body">
+            <p>
+              آنا تمثل الجانب الواعي والعملي من التجربة.<br>
+              هي معلمة ورائدة أعمال،<br>
+              ترى التعليم مساحةً للفهم قبل أن يكون شرحًا،<br>
+              وترى ريادة الأعمال كتحويلٍ واعٍ للفكرة إلى أثرٍ ملموس.
+            </p>
+          </div>
+
+        </section>
+
+        <!-- ── Section 5: آنا تعبّر عن ── -->
+        <section class="discoverSection">
+
+          <h2 class="discoverSection__title">آنا تعبّر عن</h2>
+
+          <figure class="discoverSection__figure">
+            <img class="discoverSection__img" src="assets/discover5.jpg" alt="آنا تعبّر عن">
+          </figure>
+
+          <div class="discoverSection__body">
+            <ul class="discoverSection__list">
+              <li>التعليم والتربية</li>
+              <li>العلاقة بين المعلمة والطالبة</li>
+              <li>ريادة الأعمال من منظورٍ إنساني وتجريبي</li>
+            </ul>
+            <p class="discoverSection__note">🌱 آنا هي الفكرة حين تنضج وتتحول إلى أثر.</p>
+          </div>
+
+        </section>
+
+        <!-- ── Section 6: العلاقة بين نهيرا وآنا ── -->
+        <section class="discoverSection">
+
+          <h2 class="discoverSection__title">العلاقة بين نهيرا وآنا</h2>
+
+          <figure class="discoverSection__figure">
+            <img class="discoverSection__img" src="assets/discover6.png" alt="العلاقة بين نهيرا وآنا">
+          </figure>
+
+          <div class="discoverSection__body">
+            <p>
+              نهيرا وآنا ليستا شخصيتين منفصلتين،<br>
+              بل وجهان لرحلةٍ واحدةٍ تعكسان تعدد المهارات والتجارب<br>
+              التي شكّلت مسار المؤلفة أنهار.
+            </p>
+            <p>
+              فبين الإبداع والوعي،<br>
+              وبين الفكرة والتطبيق،<br>
+              تتشكل رسالة هذا المشروع.
+            </p>
+            <p class="discoverSection__closing">هنا تبدأ القصة… وتستمر.</p>
+          </div>
+
+        </section>
 
       </div>
+    </article>
 
-      <!-- RIGHT COLUMN -->
-      <div class="landing__col landing__col--right">
+  </main>
 
-        <!-- Pink framed image card -->
-        <div class="landing__frame landing__frame--pink">
-          <img src="assets/anharversestandingpink.png" alt="Pink card">
-        </div>
+  <footer class="siteFooter" dir="rtl">
+    <div class="siteFooter__rule" aria-hidden="true"></div>
 
-        <!-- Nuhaira text block -->
-        <div class="landing__text">
-
-          <h3 class="landing__h">نهيرا – الإبداع يبدأ من الخيال</h3>
-
-          <p class="landing__p">
-            نهيرا تمثل الجانب الإبداعي والإنساني من الرحلة.<br>
-            هي الطفلة التي ترى العالم بعين الخيال،<br>
-            وتعبّر عن ذاتها من خلال الرسم، والتصوير، والقصص.<br>
-            تقدّم مفاهيم تطوير الذات بلغةٍ بسيطة قريبة من القلب،<br>
-            تناسب الطفل والمراهق في آنٍ واحد.
-          </p>
-
-          <h4 class="landing__h2">نهيرا تعبّر عن:</h4>
-          <ul class="landing__list">
-            <li>التعبير بالرسم والألوان</li>
-            <li>تطوير الذات بلغةٍ قصصية</li>
-            <li>القراءة وبناء الوعي المبكر</li>
-          </ul>
-
-          <p class="landing__note">
-            نهيرا لا تُعلّم… بل تفتح باب الفهم.
-          </p>
-
-          <!-- ✅ from figma -->
-          <h4 class="landing__h2">من هي آنا؟</h4>
-
-        </div>
-
-        <!-- Two stacked framed images -->
-        <div class="landing__frame landing__frame--mid">
-          <img src="assets/anharteaching.jpg" alt="Right card 1">
-        </div>
-
-        <div class="landing__frame landing__frame--mid">
-          <img src="assets/anharentrepreneur.png" alt="Right card 2">
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- Bottom CTA -->
-    <section class="landing__cta">
-      <p class="landing__ctaTopText">
-        هنا تبدأ القصة… وتستمر.
-      </p>
-
-      <div class="landing__ctaActions">
-        <a class="btn btn--ghost" href="article.html">هنا تبدأ القصة وتستمر</a>
-      </div>
-    </section>
-
-    <footer class="landing__footer">
-      <div class="landing__footerLeft">
-        <p class="landing__footerTitle">تابعنا أيضًا هنا:</p>
-        <div class="landing__socials" dir="ltr">
-          <a href="#" aria-label="Instagram">◦</a>
-          <a href="#" aria-label="X">◦</a>
-          <a href="#" aria-label="YouTube">◦</a>
-          <a href="#" aria-label="TikTok">◦</a>
+    <div class="siteFooter__inner">
+      <div class="siteFooter__left">
+        <img class="siteFooter__logo" src="assets/logo.png" alt="AnharVerse" />
+        <p class="siteFooter__smallText">نلتقي أيضًا هنا..</p>
+        <div class="siteFooter__social" dir="ltr" aria-label="روابط التواصل الاجتماعي">
+          <a class="siteFooter__icon" href="#" aria-label="Facebook">f</a>
+          <a class="siteFooter__icon" href="#" aria-label="LinkedIn">in</a>
+          <a class="siteFooter__icon" href="#" aria-label="YouTube">▶</a>
+          <a class="siteFooter__icon" href="#" aria-label="Instagram">◎</a>
         </div>
       </div>
 
-      <div class="landing__footerRight">
-        <h3 class="landing__footerHeadline">الرحلة مازالت في بدايتها…</h3>
-      </div>
-    </footer>
+      <h3 class="siteFooter__headline">الرحلة مازالت في بدايتها...</h3>
+    </div>
+  </footer>
 
-  </div>
 </body>
 </html>
