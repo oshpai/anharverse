@@ -107,8 +107,8 @@
   }
 
   .visionPage__img {
-    aspect-ratio: 3 / 4;
-    height: 380px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     width: 100%;
   }
 
@@ -166,10 +166,10 @@
     grid-row: 2;
   }
 
-  /* Constrain image height in sections */
+  /* Square images in sections */
   .visionSection .visionPage__img {
-    aspect-ratio: unset;
-    height: 300px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     width: 100%;
     object-fit: cover;
   }
