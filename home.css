@@ -1,0 +1,183 @@
+/* ===================================================
+   home.css  —  الرئيسية  (mobile-first)
+=================================================== */
+
+:root {
+  --sage:     #6f8f7d;
+  --sageDark: #4f6f5f;
+  --wrap:     min(680px, 92vw);
+}
+
+.page { background: #fff; }
+
+/* ---- Outer wrapper ---- */
+.homePage {
+  background: #fff;
+}
+
+.homePage__inner {
+  width: var(--wrap);
+  margin: 0 auto;
+  padding: 36px 0 48px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+/* ---- Hero title ---- */
+.homePage__hero {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+/* ---- Blocks ---- */
+.homeBlock {
+  margin-bottom: 44px;
+}
+
+/* ---- Standalone headings (appear above the image) ---- */
+.homeBlock__heading--standalone {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sageDark);
+  margin-bottom: 18px;
+}
+
+/* ---- Images (mobile: full width) ---- */
+.homeBlock__figure {
+  margin: 0 0 20px;
+}
+
+.homeBlock__img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 10px 28px rgba(0,0,0,.10);
+}
+
+/* ---- Body text ---- */
+.homeBlock__heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sageDark);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.homeBlock__body p {
+  font-size: 14px;
+  color: #3f3f3f;
+  line-height: 2.1;
+  margin-bottom: 14px;
+}
+
+.homeBlock__accent {
+  color: var(--sage) !important;
+  font-weight: 600;
+}
+
+.homeBlock__subheading {
+  font-size: 15px;
+  font-weight: 700;
+  color: #3f3f3f;
+  margin: 16px 0 10px;
+}
+
+/* ===================================================
+   Desktop (≥ 860px) — square images, alternating sides
+=================================================== */
+@media (min-width: 860px) {
+
+  :root {
+    --wrap: min(1100px, 92vw);
+  }
+
+  .homePage__inner {
+    padding: 52px 0 64px;
+  }
+
+  .homePage__hero {
+    font-size: 30px;
+    margin-bottom: 52px;
+  }
+
+  /* Each block: two-column grid */
+  .homeBlock {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 52px;
+    align-items: start;
+    margin-bottom: 0;
+    padding: 44px 0;
+    border-top: 1px solid #f0ede8;
+  }
+
+  .homeBlock:nth-child(odd) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  /* Standalone headings span full width */
+  .homeBlock__heading--standalone {
+    grid-column: 1 / -1;
+    font-size: 22px;
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #f0ede8;
+  }
+
+  /* Square images */
+  .homeBlock__img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Even blocks: image col1 (narrow), text col2 (wide) */
+  .homeBlock:nth-child(even) .homeBlock__figure {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .homeBlock:nth-child(even) .homeBlock__body {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  /* Odd blocks: text col1 (wide), image col2 (narrow) */
+  .homeBlock:nth-child(odd) .homeBlock__figure {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .homeBlock:nth-child(odd) .homeBlock__body {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /* Block 2 is image-only — let it span full width on desktop */
+  .homeBlock:nth-child(3) {
+    grid-template-columns: 1fr;
+  }
+
+  .homeBlock:nth-child(3) .homeBlock__figure {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .homeBlock:nth-child(3) .homeBlock__img {
+    aspect-ratio: 16 / 6;
+    max-height: 340px;
+  }
+
+  .homeBlock__body p {
+    font-size: 15px;
+  }
+}

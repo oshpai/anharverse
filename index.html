@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="landing.css" />
+  <link rel="stylesheet" href="home.css" />
 </head>
 <body>
 
@@ -29,97 +30,96 @@
         <img class="top__logo" src="assets/logo.png" alt="AnharVerse">
       </a>
     </div>
-
     <div class="top__rule"></div>
-
-    <section class="hero">
-      <h1 class="hero__title">هنا تبدأ الحكاية: من فكرةٍ صغيرة… إلى عالم بصريٍّ يصنع أثرًا إنسانيًا يتجاوز الحكاية.</h1>
-    </section>
   </header>
 
   <main class="page">
 
-    <section class="heroMedia">
-      <div class="heroMedia__inner">
-        <figure class="heroMedia__frame">
-          <img class="heroMedia__img" src="assets/anharversepen.jpg" alt="AnharVerse workspace" />
-        </figure>
+    <article class="homePage">
+      <div class="homePage__inner">
 
-        <div class="heroMedia__actions">
-          <a class="btn btn--sage" href="article.html">تابع الرحلة</a>
-        </div>
-      </div>
+        <!-- ── Hero title ── -->
+        <h1 class="homePage__hero">
+          هنا تبدأ الحكاية:<br>
+          من فكرةٍ صغيرة… إلى عالم بصريٍّ يصنع أثرًا إنسانيًا يتجاوز الحكاية.
+        </h1>
 
-      <div class="heroMedia__rule"></div>
-    </section>
+        <!-- ── Block 1 ── -->
+        <section class="homeBlock">
 
-    <section class="aboutIntro" aria-label="ما هو عالم أنهار">
-      <div class="aboutIntro__inner">
-        <h2 class="aboutIntro__title">ما هو عالم أنهار؟</h2>
+          <figure class="homeBlock__figure">
+            <img class="homeBlock__img" src="assets/main1.jpg" alt="عالم أنهار">
+          </figure>
 
-        <p class="aboutIntro__p">
-          مساحةٌ تُبنى فيها الأفكار بوعي، وتُروى بالحكاية، لتتحول إلى أعمالٍ تعبّر عن الإنسان، وتترك أثرًا حقيقيًا في التجربة البصرية.
-        </p>
-
-        <p class="aboutIntro__p aboutIntro__p--green">
-          هنا تبدأ رحلتي في تأليف وتصميم أول عمل يعكس هويتي.
-        </p>
-      </div>
-
-      <div class="aboutIntro__rule" aria-hidden="true"></div>
-    </section>
-
-    <section class="storyBlock" aria-label="القصة أولاً">
-      <div class="storyBlock__inner">
-
-        <div class="storyBlock__grid">
-
-          <div class="storyBlock__left">
-            <figure class="storyBlock__media storyBlock__media--big">
-              <img src="assets/anharversedrawing.jpg" alt="كتابة في دفتر">
-            </figure>
-
-            <figure class="storyBlock__media storyBlock__media--bottom">
-              <img src="assets/anharversedrawing2.jpg" alt="مكتب العمل">
-            </figure>
+          <div class="homeBlock__body">
+            <h2 class="homeBlock__heading">ما هو عالم أنهار؟</h2>
+            <p>
+              مساحةٌ تُبنى فيها الأفكار بوعي، وتُروى بالحكاية،
+              لتتحول إلى أعمالٍ تعبّر عن الإنسان،
+              وتترك أثرًا حقيقيًا في التجربة البصرية.
+            </p>
+            <p class="homeBlock__accent">
+              هنا تبدأ رحلتي في تأليف وتصميم أول عمل يعكس هويتي.
+            </p>
           </div>
 
-          <div class="storyBlock__right">
-            <h3 class="storyBlock__title">القصة أولًا</h3>
+        </section>
 
-            <p class="storyBlock__lead">
+        <!-- ── Block 2 ── -->
+        <section class="homeBlock">
+
+          <figure class="homeBlock__figure">
+            <img class="homeBlock__img" src="assets/main2.jpg" alt="الرحلة">
+          </figure>
+
+        </section>
+
+        <!-- ── Block 3 ── -->
+        <section class="homeBlock">
+
+          <h2 class="homeBlock__heading homeBlock__heading--standalone">القصة أولًا</h2>
+
+          <figure class="homeBlock__figure">
+            <img class="homeBlock__img" src="assets/main3.jpg" alt="القصة أولًا">
+          </figure>
+
+          <div class="homeBlock__body">
+            <p>
               في عالم أنهار، تبدأ كل فكرة بحكاية —<br>
               حكاية إنسان… تجربةٍ… وسؤالٍ عميق.<br>
-              فالقصص هي أقرب الطرق إلى الفهم،<br>
+              فالقصص هي أقرب الطرق إلى الفهم،
               وأصدق وسيلةٍ للتأثير!
             </p>
+          </div>
 
-            <figure class="storyBlock__media storyBlock__media--ipad">
-              <img src="assets/anharversepaintings.jpg" alt="رسم على اللوحة">
-            </figure>
+        </section>
 
-            <h4 class="storyBlock__sub">الإبداع:</h4>
-            <p class="storyBlock__p">
+        <!-- ── Block 4 ── -->
+        <section class="homeBlock">
+
+          <h2 class="homeBlock__heading homeBlock__heading--standalone">الإبداع</h2>
+
+          <figure class="homeBlock__figure">
+            <img class="homeBlock__img" src="assets/main4.jpg" alt="الإبداع">
+          </figure>
+
+          <div class="homeBlock__body">
+            <p>
               الإبداع في هذا العالم ليس مجرد تصميم جميل،<br>
               بل طريقة تفكير تحول القصة إلى رؤية،<br>
               والفكرة إلى تجربة بصرية متكاملة.
             </p>
-
-            <h4 class="storyBlock__sub storyBlock__sub--green">من الإلهام إلى نتائج ملموسة</h4>
-            <p class="storyBlock__p">
+            <h3 class="homeBlock__subheading">من الإلهام إلى نتائج ملموسة</h3>
+            <p>
               كل فكرةٍ تبدأ بإلهام، وتتحوّل بوعيٍ إلى مشروعٍ قابلٍ للتطبيق،<br>
               يحمل معنى… ويترك أثرًا.
             </p>
           </div>
 
-        </div>
-
-        <div class="storyBlock__actions">
-          <a class="btn btn--sage" href="article.html">اكتشف الرحلة</a>
-        </div>
+        </section>
 
       </div>
-    </section>
+    </article>
 
   </main>
 
