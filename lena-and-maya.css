@@ -1,0 +1,352 @@
+/* ===================================================
+   lena-and-maya.css  —  قصة لينا ومايا  (mobile-first)
+=================================================== */
+
+:root {
+  --sage:     #6f8f7d;
+  --sageDark: #4f6f5f;
+  --cream:    #f3eee6;
+  --wrap:     min(680px, 92vw);
+}
+
+.page { background: #fff; }
+
+/* ---- Outer wrapper ---- */
+.lmPage {
+  background: #fff;
+}
+
+.lmPage__inner {
+  width: var(--wrap);
+  margin: 0 auto;
+  padding: 36px 0 48px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+/* ---- Bilingual text pairs ---- */
+.lmAr {
+  margin: 0;
+}
+
+.lmEn {
+  margin: 4px 0 0;
+  direction: ltr;
+  text-align: left;
+  color: #8a8a8a;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ---- Section shell ---- */
+.lmSection {
+  margin-bottom: 48px;
+  padding-top: 40px;
+  border-top: 1px solid #f0ede8;
+}
+
+.lmSection:first-of-type {
+  padding-top: 0;
+  border-top: none;
+}
+
+.lmSection__eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sage);
+  letter-spacing: .02em;
+  margin-bottom: 10px;
+}
+
+.lmSection__eyebrow .lmEn {
+  font-size: 11px;
+  color: #a9c2b3;
+}
+
+.lmSection__title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--sageDark);
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.lmSection__title .lmEn {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.lmSection__intro {
+  font-size: 14px;
+  color: #6d6d6d;
+  line-height: 2;
+  margin-bottom: 22px;
+}
+
+.lmSection__intro .lmEn {
+  font-size: 13px;
+}
+
+/* ---- Hero ---- */
+.lmHero__title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.lmHero__title .lmEn {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.lmHero__core {
+  margin: 18px 0 22px;
+  padding: 16px 18px;
+  background: var(--cream);
+  border-right: 4px solid var(--sage);
+  border-radius: 6px;
+}
+
+.lmHero__core .lmAr {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--sageDark);
+}
+
+.lmHero__core .lmEn {
+  font-size: 15px;
+  color: var(--sage);
+}
+
+.lmHero__intro {
+  font-size: 14px;
+  color: #6d6d6d;
+  line-height: 2;
+  margin-bottom: 24px;
+}
+
+.lmHero__intro .lmEn {
+  font-size: 13px;
+}
+
+/* ---- Placeholder media (image / video not yet supplied) ---- */
+.lmPlaceholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--cream);
+  border: 1.5px dashed #cfc6b8;
+  border-radius: 10px;
+  color: #9a9186;
+  padding: 20px;
+  margin: 0 0 20px;
+}
+
+.lmPlaceholder__icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.lmPlaceholder__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #7c7367;
+}
+
+.lmPlaceholder__label .lmEn {
+  color: #a79d8f;
+  font-size: 12px;
+}
+
+.lmPlaceholder--wide {
+  aspect-ratio: 16 / 9;
+}
+
+/* ---- About the story: meta pills ---- */
+.lmMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 4px 0 20px;
+  justify-content: flex-end;
+}
+
+.lmMeta__pill {
+  background: #eef3f0;
+  color: var(--sageDark);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.lmMeta__pill .lmEn {
+  color: #7e988a;
+  font-size: 11px;
+}
+
+.lmSection__body p {
+  font-size: 14px;
+  color: #3f3f3f;
+  line-height: 2.1;
+  margin-bottom: 10px;
+}
+
+/* ---- Listen / audio ---- */
+.lmAudioGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lmAudioCard {
+  background: var(--cream);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.lmAudioCard__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sageDark);
+  margin-bottom: 10px;
+}
+
+.lmAudioCard__label .lmEn {
+  font-size: 12px;
+  color: var(--sage);
+}
+
+.lmAudioCard audio {
+  width: 100%;
+  display: block;
+}
+
+/* ---- Buttons ---- */
+.lmBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: var(--sage);
+  color: #fff;
+  padding: 13px 26px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.10);
+}
+
+.lmBtn:hover { background: var(--sageDark); }
+
+.lmBtn--outline {
+  background: #fff;
+  color: var(--sage);
+  border: 1.5px solid var(--sage);
+  box-shadow: none;
+}
+
+.lmSection__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+/* ---- Share / coming soon ---- */
+.lmShare__handle {
+  color: var(--sage);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.lmComing {
+  text-align: center;
+  color: #7a7a7a;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.lmComing .lmEn {
+  text-align: center;
+}
+
+/* ===================================================
+   Desktop (≥ 860px)
+=================================================== */
+@media (min-width: 860px) {
+
+  :root {
+    --wrap: min(1100px, 92vw);
+  }
+
+  .lmPage__inner {
+    padding: 52px 0 64px;
+  }
+
+  .lmHero {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 52px;
+    align-items: center;
+    padding-bottom: 44px;
+  }
+
+  .lmHero__title { font-size: 40px; }
+  .lmHero__title .lmEn { font-size: 24px; }
+
+  .lmHero__media { margin: 0; }
+
+  .lmSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 52px;
+    align-items: start;
+    padding: 48px 0;
+  }
+
+  .lmSection__eyebrow,
+  .lmSection__title,
+  .lmSection__intro {
+    grid-column: 1 / -1;
+  }
+
+  .lmSection:nth-of-type(even) .lmSection__media {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .lmSection:nth-of-type(even) .lmSection__body {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .lmSection:nth-of-type(odd) .lmSection__media {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .lmSection:nth-of-type(odd) .lmSection__body {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .lmSection__body p { font-size: 15px; }
+
+  .lmMeta { justify-content: flex-start; }
+
+  .lmAudioGrid {
+    flex-direction: row;
+  }
+
+  .lmAudioCard { flex: 1; }
+}
