@@ -25,15 +25,26 @@
   text-align: right;
 }
 
-/* ---- Bilingual text pairs ---- */
+/* ---- Bilingual text pairs ----
+   Always block-level and force each language into its own isolated
+   bidi run, regardless of whether these classes land on a <p>, <span>,
+   or heading — mixing RTL Arabic and LTR English inline (even inside a
+   flex row) makes the browser's bidi algorithm reorder words and
+   punctuation unpredictably. Stacking them removes that ambiguity. */
 .lmAr {
+  display: block;
   margin: 0;
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: isolate;
 }
 
 .lmEn {
+  display: block;
   margin: 4px 0 0;
   direction: ltr;
   text-align: left;
+  unicode-bidi: isolate;
   color: #8a8a8a;
   font-style: italic;
   font-weight: 500;
@@ -275,8 +286,10 @@
 /* ---- Buttons ---- */
 .lmBtn {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2px;
   text-decoration: none;
   background: var(--sage);
   color: #fff;
@@ -288,6 +301,19 @@
 }
 
 .lmBtn:hover { background: var(--sageDark); }
+
+.lmBtn .lmAr,
+.lmBtn .lmEn {
+  margin: 0;
+  color: inherit;
+  font-style: normal;
+  font-weight: inherit;
+}
+
+.lmBtn .lmEn {
+  font-size: 12px;
+  opacity: .9;
+}
 
 .lmBtn--outline {
   background: #fff;
