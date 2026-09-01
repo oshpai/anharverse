@@ -15,19 +15,18 @@
   <link rel="stylesheet" href="lena-and-maya.css" />
 
   <!--
-    ASSETS TO ADD — drop these files into assets/lena-maya/ using these exact
-    names, then follow the TODO comments below to swap each placeholder in:
+    ASSET STATUS
 
+    Wired up and live:
+      assets/lena-maya/video-ar.mp4        full Arabic video (also used as the audio-only track)
+      assets/lena-maya/video-en.mp4        full English video (also used as the audio-only track)
+      assets/lena-maya/video-en-cover.mp4  short muted English cover clip shown above the English video
+
+    Still needed — drop these into assets/lena-maya/ with these exact
+    names and the placeholders below will pick them up automatically:
       hero.jpg                    cover illustration for the hero section
       about.jpg                   illustration for "About the story"
-      audio-ar.mp3                Arabic narration track
-      audio-en.mp3                English narration track
-      video.mp4                   read-aloud video
       lena-and-maya-story.pdf     print-ready story PDF
-
-    The audio player and download button below already point at the
-    filenames above, so once those files exist at those paths they will
-    work with no further code changes.
   -->
 </head>
 <body>
@@ -169,13 +168,13 @@
                 <p class="lmAudioCard__label">
                   <span class="lmAr">بالعربي</span> · <span class="lmEn">Arabic</span>
                 </p>
-                <audio controls preload="none" src="assets/lena-maya/audio-ar.mp3"></audio>
+                <audio controls preload="none" src="assets/lena-maya/video-ar.mp4"></audio>
               </div>
               <div class="lmAudioCard">
                 <p class="lmAudioCard__label">
                   <span class="lmAr">بالإنجليزي</span> · <span class="lmEn">English</span>
                 </p>
-                <audio controls preload="none" src="assets/lena-maya/audio-en.mp3"></audio>
+                <audio controls preload="none" src="assets/lena-maya/video-en.mp4"></audio>
               </div>
             </div>
           </div>
@@ -202,19 +201,21 @@
             <p class="lmEn">A read-aloud video of the full story — perfect for watching together on screen.</p>
           </div>
 
-          <!-- TODO: replace with
-            <video class="..." controls poster="assets/lena-maya/hero.jpg">
-              <source src="assets/lena-maya/video.mp4" type="video/mp4">
-            </video>
-            (or embed a YouTube/Vimeo iframe here instead)
-          -->
           <div class="lmSection__media">
-            <div class="lmPlaceholder lmPlaceholder--wide">
-              <span class="lmPlaceholder__icon">🎬</span>
-              <span class="lmPlaceholder__label">
-                <span class="lmAr">فيديو القصة قريباً</span><br>
-                <span class="lmEn">Story video — coming soon</span>
-              </span>
+            <div class="lmVideoGrid">
+              <div class="lmVideoCard">
+                <p class="lmVideoCard__label">
+                  <span class="lmAr">بالعربي</span> · <span class="lmEn">Arabic</span>
+                </p>
+                <video controls preload="none" src="assets/lena-maya/video-ar.mp4"></video>
+              </div>
+              <div class="lmVideoCard">
+                <p class="lmVideoCard__label">
+                  <span class="lmAr">بالإنجليزي</span> · <span class="lmEn">English</span>
+                </p>
+                <video class="lmVideoCard__cover" src="assets/lena-maya/video-en-cover.mp4" muted loop autoplay playsinline></video>
+                <video controls preload="none" src="assets/lena-maya/video-en.mp4"></video>
+              </div>
             </div>
           </div>
 

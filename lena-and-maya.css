@@ -231,6 +231,47 @@
   display: block;
 }
 
+/* ---- Watch / video ---- */
+.lmVideoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lmVideoCard {
+  background: var(--cream);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.lmVideoCard__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sageDark);
+  margin-bottom: 10px;
+}
+
+.lmVideoCard__label .lmEn {
+  font-size: 12px;
+  color: var(--sage);
+}
+
+.lmVideoCard video {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  background: #000;
+}
+
+.lmVideoCard video + video {
+  margin-top: 10px;
+}
+
+.lmVideoCard__cover {
+  max-height: 160px;
+  object-fit: cover;
+}
+
 /* ---- Buttons ---- */
 .lmBtn {
   display: inline-flex;
@@ -349,4 +390,10 @@
   }
 
   .lmAudioCard { flex: 1; }
+
+  .lmVideoGrid {
+    flex-direction: row;
+  }
+
+  .lmVideoCard { flex: 1; }
 }
