@@ -21,43 +21,57 @@
   padding: 36px 0 48px;
   display: flex;
   flex-direction: column;
-  text-align: right;
+  text-align: start;
 }
 
-/* ---- Mission intro ---- */
+/* ---- Mission intro (sits outside .homePage__inner so it does not
+        shift the nth-child layout of the blocks below) ---- */
 .homeIntro {
-  margin-bottom: 40px;
+  background: #fff;
+}
+
+.homeIntro__inner {
+  width: var(--wrap);
+  margin: 0 auto;
+  padding: 28px 0 32px;
+  border-bottom: 1px solid #f0ede8;
+  text-align: start;
 }
 
 .homeIntro__figure {
-  margin: 0 0 18px;
+  margin: 0 auto 22px;
+  width: min(100%, 340px);
 }
 
 .homeIntro__img {
   width: 100%;
+  aspect-ratio: 9 / 16;
   display: block;
-  border-radius: 10px;
+  border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 10px 28px rgba(0,0,0,.10);
+  box-shadow: 0 10px 28px rgba(0,0,0,.12);
 }
 
 .homeIntro__body p {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--sageDark);
   line-height: 2;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .homeIntro__cta {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
   text-decoration: none;
   background: var(--sage);
   color: #fff;
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 8px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .homeIntro__cta:hover {
@@ -145,26 +159,22 @@
     margin-bottom: 52px;
   }
 
-  .homeIntro {
+  .homeIntro__inner {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 52px;
     align-items: center;
-    margin-bottom: 52px;
-    padding-bottom: 44px;
-    border-bottom: 1px solid #f0ede8;
+    padding: 52px 0 48px;
   }
 
   .homeIntro__figure {
     margin: 0;
-  }
-
-  .homeIntro__img {
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 340px;
   }
 
   .homeIntro__body p {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   /* Each block: two-column grid */

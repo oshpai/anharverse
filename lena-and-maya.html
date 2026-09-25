@@ -4,305 +4,201 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AnharVerse | لينا ومايا (Lena and Maya)</title>
-  <meta name="description" content="لينا ومايا: قصة مصوّرة ثنائية اللغة (عربي/إنجليزي)، الحلقة الأولى من عالم أنهار. استمعي، شاهدي، واقرئي معاً.">
+  <meta name="description" content="لينا ومايا: قصة مصوّرة ثنائية اللغة (عربي/إنجليزي)، القصة الأولى من عالم أنهار. Lena and Maya: a bilingual illustrated story, the first story of AnharVerse.">
   <link rel="icon" href="assets/logo.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="landing.css" />
   <link rel="stylesheet" href="lena-and-maya.css" />
-
-  <!--
-    ASSET STATUS
-
-    Wired up and live:
-      assets/lena-maya/video-ar.mp4        full Arabic video (also used as the audio-only track)
-      assets/lena-maya/video-en.mp4        full English video (also used as the audio-only track)
-      assets/lena-maya/video-en-cover.mp4  short muted English cover clip shown above the English video
-
-    Still needed: drop these into assets/lena-maya/ with these exact
-    names and the placeholders below will pick them up automatically:
-      hero.jpg                    cover illustration for the hero section
-      about.jpg                   illustration for "About the story"
-      lena-and-maya-story.pdf     print-ready story PDF
-  -->
 </head>
-<body>
+<body data-i18n>
 
   <header class="top">
     <div class="top__inner">
-      <nav class="top__nav" aria-label="Main">
-        <a class="top__btn" href="about.html">تعرّف على</a>
-        <a class="top__link" href="contact.html">عن أنهار</a>
-        <a class="top__link" href="vision.html">الرؤية</a>
-        <a class="top__link" href="about.html">اكتشف</a>
-        <a class="top__link" href="article.html">المقالات</a>
-        <a class="top__link" href="lena-and-maya.html">لينا ومايا</a>
-        <a class="top__link" href="index.html">الرئيسية</a>
+      <nav class="top__nav" id="mainNav" aria-label="Main">
+        <a class="top__btn" href="about.html"><span data-lang="ar">تعرّف على</span><span data-lang="en" hidden>Get to know us</span></a>
+        <a class="top__link" href="contact.html"><span data-lang="ar">عن أنهار</span><span data-lang="en" hidden>About Anhar</span></a>
+        <a class="top__link" href="vision.html"><span data-lang="ar">الرؤية</span><span data-lang="en" hidden>Vision</span></a>
+        <a class="top__link" href="about.html"><span data-lang="ar">اكتشف</span><span data-lang="en" hidden>Discover</span></a>
+        <a class="top__link" href="article.html"><span data-lang="ar">المقالات</span><span data-lang="en" hidden>Articles</span></a>
+        <a class="top__link" href="lena-and-maya.html"><span data-lang="ar">لينا ومايا</span><span data-lang="en" hidden>Lena and Maya</span></a>
+        <a class="top__link" href="index.html"><span data-lang="ar">الرئيسية</span><span data-lang="en" hidden>Home</span></a>
       </nav>
 
-      <a class="top__brand" href="index.html" aria-label="AnharVerse">
-        <img class="top__logo" src="assets/logo.png" alt="AnharVerse">
-      </a>
+      <div class="top__tools">
+        <button class="top__menu" type="button" aria-label="القائمة / Menu" aria-expanded="false" aria-controls="mainNav"><span></span></button>
+        <button class="top__lang" id="langBtn" type="button" aria-label="Language / اللغة">EN</button>
+        <a class="top__brand" href="index.html" aria-label="AnharVerse">
+          <img class="top__logo" src="assets/logo.png" alt="AnharVerse" width="44" height="44">
+        </a>
+      </div>
     </div>
     <div class="top__rule"></div>
   </header>
 
   <main class="page">
-
     <article class="lmPage">
       <div class="lmPage__inner">
 
-        <!-- ── 1. Hero ── -->
-        <section class="lmSection lmHero">
+        <!-- 1. Hero: the story cover comes first -->
+        <section class="lmSec lmHero">
+
+          <figure class="lmCover">
+            <img data-lang="ar" src="assets/lena-maya/cover-ar.jpg" width="1200" height="1200" alt="غلاف قصة لينا ومايا: أنا أنا وهذا يكفي">
+            <img data-lang="en" hidden src="assets/lena-maya/cover-en.jpg" width="1200" height="1200" alt="Lena and Maya story cover: I'm me and that's enough">
+          </figure>
 
           <div class="lmHero__body">
-            <p class="lmSection__eyebrow">
-              <span class="lmAr">الحلقة الأولى من عالم أنهار</span>
-              <span class="lmEn">The first episode of AnharVerse</span>
-            </p>
+            <p class="lmEyebrow" data-lang="ar">الحلقة الأولى من عالم أنهار</p>
+            <p class="lmEyebrow" data-lang="en" hidden>The first story of AnharVerse</p>
 
-            <h1 class="lmHero__title">
-              <span class="lmAr">لينا ومايا</span>
-              <span class="lmEn">Lena and Maya</span>
-            </h1>
+            <h1 class="lmHero__title" data-lang="ar">لينا ومايا</h1>
+            <h1 class="lmHero__title" data-lang="en" hidden>Lena and Maya</h1>
 
-            <div class="lmHero__core">
-              <p class="lmAr">"أنا أنا وهذا يكفي"</p>
-              <p class="lmEn">"I'm me and that's enough"</p>
-            </div>
+            <p class="lmCore" data-lang="ar">أنا أنا وهذا يكفي</p>
+            <p class="lmCore" data-lang="en" hidden>I'm me and that's enough</p>
 
-            <div class="lmHero__intro">
-              <p class="lmAr">قصة مصوّرة ثنائية اللغة (عربي/إنجليزي)، الحلقة الأولى من عالم أنهار.</p>
-              <p class="lmEn">A bilingual illustrated story (Arabic/English), the first episode of AnharVerse.</p>
-            </div>
+            <p class="lmSec__intro" data-lang="ar">القصة الأولى من عالم أنهار، قصة مصوّرة ثنائية اللغة (عربي/إنجليزي).</p>
+            <p class="lmSec__intro" data-lang="en" hidden>The first story of AnharVerse, a bilingual illustrated story (Arabic/English).</p>
 
-            <div class="lmSection__actions">
-              <a class="lmBtn" href="#lm-download">حمّلي نسختك المجانية</a>
-            </div>
-          </div>
-
-          <!-- TODO: replace with
-            <figure class="lmHero__media">
-              <img class="..." src="assets/lena-maya/hero.jpg" alt="لينا ومايا">
-            </figure>
-          -->
-          <div class="lmHero__media">
-            <div class="lmPlaceholder">
-              <span class="lmPlaceholder__icon">📖</span>
-              <span class="lmPlaceholder__label">
-                <span class="lmAr">صورة غلاف القصة قريباً</span>
-                <span class="lmEn">Story cover illustration (coming soon)</span>
-              </span>
-            </div>
+            <a class="lmBtn" href="#lm-watch" data-lang="ar">شاهدي القصة</a>
+            <a class="lmBtn" href="#lm-watch" data-lang="en" hidden>Watch the story</a>
           </div>
 
         </section>
 
-        <!-- ── 2. About the story ── -->
-        <section class="lmSection">
+        <!-- 2. About the story -->
+        <section class="lmSec">
+          <div class="lmAboutGrid">
+            <img class="lmAbout__img" src="assets/lena-maya/about.jpg" width="1000" height="1000" loading="lazy"
+                 alt="Lena, a little artist, drawing a tree at her desk">
 
-          <p class="lmSection__eyebrow">
-            <span class="lmAr">عن القصة</span>
-            <span class="lmEn">About the story</span>
-          </p>
+            <div>
+              <h2 class="lmSec__title" data-lang="ar">عن القصة</h2>
+              <h2 class="lmSec__title" data-lang="en" hidden>About the story</h2>
 
-          <div class="lmMeta">
-            <span class="lmMeta__pill"><span class="lmAr">٦-٨ سنوات</span><span class="lmEn">6–8 years</span></span>
-            <span class="lmMeta__pill"><span class="lmAr">مستوى Pre-A1 (CEFR)</span><span class="lmEn">Pre-A1 level (CEFR)</span></span>
-            <span class="lmMeta__pill"><span class="lmAr">داء المقارنة</span><span class="lmEn">The comparison trap</span></span>
-          </div>
+              <dl class="lmFacts" data-lang="ar">
+                <div><dt>الموضوع</dt><dd>داء المقارنة: كيف تتعلم الطفلة أن تكون نفسها بدل أن تقلّد غيرها</dd></div>
+                <div><dt>الفئة العمرية</dt><dd>٦-٨ سنوات</dd></div>
+                <div><dt>المستوى اللغوي</dt><dd>مصمَّم بما يتماشى مع مستوى Pre-A1 وفق الإطار الأوروبي المرجعي للغات (CEFR)</dd></div>
+              </dl>
+              <dl class="lmFacts" data-lang="en" hidden>
+                <div><dt>Theme</dt><dd>The comparison trap: how a girl learns to be herself instead of copying others</dd></div>
+                <div><dt>Age group</dt><dd>6–8 years old</dd></div>
+                <div><dt>Language level</dt><dd>Designed to align with the Pre-A1 level of the Common European Framework of Reference for Languages (CEFR)</dd></div>
+              </dl>
 
-          <!-- TODO: replace with
-            <figure class="lmSection__media">
-              <img class="..." src="assets/lena-maya/about.jpg" alt="لينا ومايا">
-            </figure>
-          -->
-          <div class="lmSection__media">
-            <div class="lmPlaceholder">
-              <span class="lmPlaceholder__icon">🎨</span>
-              <span class="lmPlaceholder__label">
-                <span class="lmAr">صورة من القصة قريباً</span>
-                <span class="lmEn">Story illustration (coming soon)</span>
-              </span>
+              <p data-lang="ar">لينا فنانة صغيرة ترسم شجرة لا تشبه أي شجرة أخرى. حين تبدأ صديقتها مايا بتقليدها في كل شيء، تكتشف لينا، بمساعدة نُهيرا، أن أجمل ما في مايا هو ما لم تكتشفه بعد عن نفسها.</p>
+              <p data-lang="en" hidden>Lena is a little artist who draws a tree unlike any other. When her friend Maya starts copying everything she does, Lena discovers, with Nuhaira's help, that the most beautiful thing about Maya is what she hasn't yet discovered about herself.</p>
             </div>
           </div>
-
-          <div class="lmSection__body">
-            <p class="lmAr">
-              لينا فنانة صغيرة ترسم شجرة لا تشبه أي شجرة أخرى. حين تبدأ صديقتها مايا بتقليدها في كل شيء،
-              تكتشف لينا، بمساعدة نُهيرا، أن أجمل ما في مايا هو ما لم تكتشفه بعد عن نفسها.
-            </p>
-            <p class="lmEn">
-              Lena is a little artist who draws a tree unlike any other. When her friend Maya starts
-              copying everything she does, Lena discovers, with Nuhaira's help, that the most
-              beautiful thing about Maya is what she hasn't yet discovered about herself.
-            </p>
-          </div>
-
         </section>
 
-        <!-- ── 3. Listen and read together ── -->
-        <section class="lmSection">
+        <!-- 3. Watch (videos carry the narration, so no separate audio) -->
+        <section class="lmSec" id="lm-watch">
+          <h2 class="lmSec__title" data-lang="ar">استمعي واقرئي معها الليلة</h2>
+          <h2 class="lmSec__title" data-lang="en" hidden>Listen and read together tonight</h2>
 
-          <p class="lmSection__eyebrow">
-            <span class="lmAr">استمعي واقرئي معاً</span>
-            <span class="lmEn">Listen and read together</span>
-          </p>
+          <p class="lmSec__intro" data-lang="ar">اجلسي مع طفلك، واستمعا للقصة معاً بصوتي وصوت نُهيرا، بالعربي والإنجليزي.</p>
+          <p class="lmSec__intro" data-lang="en" hidden>Sit with your child, and listen to the story together in my voice and Nuhaira's, in Arabic and English.</p>
 
-          <h2 class="lmSection__title">
-            <span class="lmAr">استمعي واقرئي معها الليلة</span>
-            <span class="lmEn">Listen and read together tonight</span>
-          </h2>
-
-          <div class="lmSection__intro">
-            <p class="lmAr">اجلسي مع طفلك، واستمعا للقصة معاً، بصوتي وصوت نُهيرا، بالعربي والإنجليزي.</p>
-            <p class="lmEn">Sit with your child, and listen to the story together in my voice and Nuhaira's, in Arabic and English.</p>
-          </div>
-
-          <div class="lmSection__media">
-            <div class="lmAudioGrid">
-              <div class="lmAudioCard">
-                <p class="lmAudioCard__label">
-                  <span class="lmAr">بالعربي</span><span class="lmEn">Arabic</span>
-                </p>
-                <audio controls preload="none" src="assets/lena-maya/video-ar.mp4"></audio>
-              </div>
-              <div class="lmAudioCard">
-                <p class="lmAudioCard__label">
-                  <span class="lmAr">بالإنجليزي</span><span class="lmEn">English</span>
-                </p>
-                <audio controls preload="none" src="assets/lena-maya/video-en.mp4"></audio>
-              </div>
+          <div class="lmVideos" data-lang="ar">
+            <div>
+              <p class="lmVideo__label">القصة كاملة (النسخة المطبوعة)</p>
+              <a class="yt" data-yt="IEcPpCbkWLc" href="https://youtu.be/IEcPpCbkWLc" aria-label="أنا أنا وهذا يكفي، النسخة المطبوعة القصة كاملة">
+                <img loading="lazy" src="https://i.ytimg.com/vi/IEcPpCbkWLc/maxresdefault.jpg" alt=""><span class="yt__play"></span>
+              </a>
             </div>
-          </div>
-
-          <div class="lmSection__body"></div>
-
-        </section>
-
-        <!-- ── 4. Watch the story (video) ── -->
-        <section class="lmSection">
-
-          <p class="lmSection__eyebrow">
-            <span class="lmAr">شاهدي القصة</span>
-            <span class="lmEn">Watch the story</span>
-          </p>
-
-          <h2 class="lmSection__title">
-            <span class="lmAr">شاهدا القصة معاً</span>
-            <span class="lmEn">Watch the story together</span>
-          </h2>
-
-          <div class="lmSection__intro">
-            <p class="lmAr">فيديو مصوّر للقصة كاملة، مثالي لمشاهدتها مع طفلك على الشاشة.</p>
-            <p class="lmEn">A read-aloud video of the full story, perfect for watching together on screen.</p>
-          </div>
-
-          <div class="lmSection__media">
-            <div class="lmVideoGrid">
-              <div class="lmVideoCard">
-                <p class="lmVideoCard__label">
-                  <span class="lmAr">بالعربي</span><span class="lmEn">Arabic</span>
-                </p>
-                <video controls preload="none" src="assets/lena-maya/video-ar.mp4"></video>
-              </div>
-              <div class="lmVideoCard">
-                <p class="lmVideoCard__label">
-                  <span class="lmAr">بالإنجليزي</span><span class="lmEn">English</span>
-                </p>
-                <video class="lmVideoCard__cover" src="assets/lena-maya/video-en-cover.mp4" muted loop autoplay playsinline></video>
-                <video controls preload="none" src="assets/lena-maya/video-en.mp4"></video>
-              </div>
-            </div>
-          </div>
-
-          <div class="lmSection__body"></div>
-
-        </section>
-
-        <!-- ── 5. Download the full story ── -->
-        <section class="lmSection" id="lm-download">
-
-          <p class="lmSection__eyebrow">
-            <span class="lmAr">حمّلي القصة كاملة</span>
-            <span class="lmEn">Download the full story</span>
-          </p>
-
-          <h2 class="lmSection__title">
-            <span class="lmAr">حمّلي نسختك المجانية</span>
-            <span class="lmEn">Download your free copy</span>
-          </h2>
-
-          <div class="lmSection__intro">
-            <p class="lmAr">القصة الأولى من عالم أنهار: كاملة، مجانية، بلا مقابل. نسخة قابلة للطباعة بجودة عالية.</p>
-            <p class="lmEn">The first story from AnharVerse: complete, free, no cost. A print-ready, high-quality version.</p>
-          </div>
-
-          <div class="lmSection__media"></div>
-
-          <div class="lmSection__body">
-            <div class="lmSection__actions">
-              <a class="lmBtn" href="assets/lena-maya/lena-and-maya-story.pdf" download>
-                <span class="lmAr">تحميل القصة (PDF)</span>
-                <span class="lmEn">Download the story (PDF)</span>
+            <div>
+              <p class="lmVideo__label">النسخة العربية مع الترجمة</p>
+              <a class="yt" data-yt="ri7aFgCk3BQ" href="https://youtu.be/ri7aFgCk3BQ" aria-label="قصة أنا أنا وهذا يكفي، النسخة العربية مع الترجمة">
+                <img loading="lazy" src="https://i.ytimg.com/vi/ri7aFgCk3BQ/maxresdefault.jpg" alt=""><span class="yt__play"></span>
               </a>
             </div>
           </div>
 
-        </section>
-
-        <!-- ── 6. Invitation to share ── -->
-        <section class="lmSection">
-
-          <div class="lmSection__body" style="grid-column:1/-1;">
-            <p class="lmAr">
-              إذا كنتِ تبحثين عن طريقة تجعل طفلك يحب الإنجليزية لا يخافها، جرّبي معه قصة لينا ومايا الليلة.
-              بدون التزام، فقط قصة واحدة.
-            </p>
-            <p class="lmEn">
-              If you're looking for a way to make your child love English instead of fearing it, try the
-              story of Lena and Maya with them tonight. No commitment, just one story.
-            </p>
-            <p style="margin-top:16px;">
-              <span class="lmAr">شاركينا رأي طفلك بعد القراءة عبر</span>
-              <a class="lmShare__handle" href="https://instagram.com/anhar.verse" target="_blank" rel="noopener">@anhar.verse</a>
-            </p>
+          <div class="lmVideos" data-lang="en" hidden>
+            <div>
+              <p class="lmVideo__label">Full story</p>
+              <a class="yt" data-yt="D4k-SA8lQR0" href="https://youtu.be/D4k-SA8lQR0" aria-label="I'm Me and That's Enough, full story">
+                <img loading="lazy" src="https://i.ytimg.com/vi/D4k-SA8lQR0/maxresdefault.jpg" alt=""><span class="yt__play"></span>
+              </a>
+            </div>
+            <div>
+              <p class="lmVideo__label">With subtitles</p>
+              <a class="yt" data-yt="DAUCNRteXPo" href="https://youtu.be/DAUCNRteXPo" aria-label="I'm Me and That's Enough, with subtitles">
+                <img loading="lazy" src="https://i.ytimg.com/vi/DAUCNRteXPo/maxresdefault.jpg" alt=""><span class="yt__play"></span>
+              </a>
+            </div>
           </div>
-
         </section>
 
-        <!-- ── 7. Coming stories ── -->
-        <section class="lmSection lmComing">
-          <p class="lmAr">هذه أول حكاية من رحلة عالم أنهار، والمزيد في الطريق. تابعينا لتكوني أول من يعرف.</p>
-          <p class="lmEn">This is the first story in the AnharVerse journey. More is on the way. Follow us to be the first to know.</p>
+        <!-- 4. Download
+             HIDDEN until the print-ready PDF exists. To publish it: add the file as
+             assets/lena-maya/lena-and-maya-story.pdf, then delete the "hidden" attribute below. -->
+        <section class="lmSec lmCenter" id="lm-download" hidden>
+          <h2 class="lmSec__title" data-lang="ar">حمّلي نسختك المجانية</h2>
+          <h2 class="lmSec__title" data-lang="en" hidden>Download your free copy</h2>
+
+          <p class="lmSec__intro" data-lang="ar">هذه أول ثمرة لرحلتي، أهديها لكِ كاملة. وإن لامست قلب طفلك، شاركيها فتكبر معكِ.</p>
+          <p class="lmSec__intro" data-lang="en" hidden>This is the first fruit of my journey, a gift to you, complete and whole. And if it touches your child's heart, share it so it can grow with you.</p>
+
+          <a class="lmBtn" href="assets/lena-maya/lena-and-maya-story.pdf" download data-lang="ar">تحميل مجاناً</a>
+          <a class="lmBtn" href="assets/lena-maya/lena-and-maya-story.pdf" download data-lang="en" hidden>Download for free</a>
+        </section>
+
+        <!-- 5. Invitation to share -->
+        <section class="lmSec lmCenter">
+          <p data-lang="ar">إذا كنتِ تبحثين عن طريقة تجعل طفلك يحب الإنجليزية لا يخافها، جرّبي معه قصة لينا ومايا الليلة. بدون التزام، فقط قصة واحدة.</p>
+          <p data-lang="en" hidden>If you're looking for a way to make your child love English instead of fearing it, try the story of Lena and Maya with them tonight. No commitment, just one story.</p>
+
+          <p style="margin: 18px 0 14px;" data-lang="ar">شاركينا رأي طفلك بعد القراءة</p>
+          <p style="margin: 18px 0 14px;" data-lang="en" hidden>Share your child's reaction after reading</p>
+
+          <a class="lmBtn" href="https://forms.cloud.microsoft/r/28e3i049Vm" target="_blank" rel="noopener" data-lang="ar">شاركينا رأيك</a>
+          <a class="lmBtn" href="https://forms.cloud.microsoft/r/28e3i049Vm" target="_blank" rel="noopener" data-lang="en" hidden>Share your feedback</a>
+        </section>
+
+        <!-- 6. Coming stories -->
+        <section class="lmSec lmCenter">
+          <p data-lang="ar">هذه أول حكاية من رحلة عالم أنهار، والمزيد في الطريق. تابعينا لتكوني أول من يعرف.</p>
+          <p data-lang="en" hidden>This is the first story in the AnharVerse journey, and more is on the way. Follow us to be the first to know.</p>
+
+          <div style="margin-top: 22px;">
+            <a class="yt yt--short" data-yt="lTw4W3gK4tY" href="https://youtube.com/shorts/lTw4W3gK4tY" aria-label="AnharVerse starts here">
+              <img loading="lazy" src="https://i.ytimg.com/vi/lTw4W3gK4tY/maxresdefault.jpg" alt=""><span class="yt__play"></span>
+            </a>
+            <p class="lmComing__caption" data-lang="ar">مقدمة تحكي الفكرة قبل القصة</p>
+            <p class="lmComing__caption" data-lang="en" hidden>An introduction to the idea, before the story</p>
+          </div>
         </section>
 
       </div>
     </article>
-
   </main>
 
-  <footer class="siteFooter" dir="rtl">
+  <footer class="siteFooter">
     <div class="siteFooter__rule" aria-hidden="true"></div>
 
     <div class="siteFooter__inner">
       <div class="siteFooter__left">
-        <img class="siteFooter__logo" src="assets/logo.png" alt="AnharVerse" />
-        <p class="siteFooter__smallText">نلتقي أيضًا هنا..</p>
-        <div class="siteFooter__social" dir="ltr" aria-label="روابط التواصل الاجتماعي">
+        <img class="siteFooter__logo" src="assets/logo.png" alt="AnharVerse" width="34" height="34" />
+        <p class="siteFooter__smallText"><span data-lang="ar">نلتقي أيضًا هنا..</span><span data-lang="en" hidden>Find us here too..</span></p>
+        <div class="siteFooter__social" dir="ltr" aria-label="Social">
           <a class="siteFooter__icon" href="#" aria-label="Facebook">f</a>
           <a class="siteFooter__icon" href="#" aria-label="LinkedIn">in</a>
-          <a class="siteFooter__icon" href="#" aria-label="YouTube">▶</a>
+          <a class="siteFooter__icon" href="https://www.youtube.com/@AnharVerse1" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
           <a class="siteFooter__icon" href="https://instagram.com/anhar.verse" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
         </div>
       </div>
 
-      <h3 class="siteFooter__headline">الرحلة مازالت في بدايتها...</h3>
+      <h3 class="siteFooter__headline"><span data-lang="ar">الرحلة مازالت في بدايتها...</span><span data-lang="en" hidden>The journey is only just beginning...</span></h3>
     </div>
   </footer>
 
+  <script src="site.js" defer></script>
 </body>
 </html>

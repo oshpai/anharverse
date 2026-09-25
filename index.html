@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AnharVerse | الرئيسية</title>
+  <meta name="description" content="عالم أنهار: مشروع تعليمي يجمع بين تعلم الإنجليزية وتطوير الذات عبر قصص مصورة ثنائية اللغة للأطفال. AnharVerse: an educational project combining English learning and self-development through bilingual illustrated stories.">
   <link rel="icon" href="assets/logo.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,23 +14,27 @@
   <link rel="stylesheet" href="landing.css" />
   <link rel="stylesheet" href="home.css" />
 </head>
-<body>
+<body data-i18n>
 
   <header class="top">
     <div class="top__inner">
-      <nav class="top__nav" aria-label="Main">
-        <a class="top__btn" href="about.html">تعرّف على</a>
-        <a class="top__link" href="contact.html">عن أنهار</a>
-        <a class="top__link" href="vision.html">الرؤية</a>
-        <a class="top__link" href="about.html">اكتشف</a>
-        <a class="top__link" href="article.html">المقالات</a>
-        <a class="top__link" href="lena-and-maya.html">لينا ومايا</a>
-        <a class="top__link" href="index.html">الرئيسية</a>
+      <nav class="top__nav" id="mainNav" aria-label="Main">
+        <a class="top__btn" href="about.html"><span data-lang="ar">تعرّف على</span><span data-lang="en" hidden>Get to know us</span></a>
+        <a class="top__link" href="contact.html"><span data-lang="ar">عن أنهار</span><span data-lang="en" hidden>About Anhar</span></a>
+        <a class="top__link" href="vision.html"><span data-lang="ar">الرؤية</span><span data-lang="en" hidden>Vision</span></a>
+        <a class="top__link" href="about.html"><span data-lang="ar">اكتشف</span><span data-lang="en" hidden>Discover</span></a>
+        <a class="top__link" href="article.html"><span data-lang="ar">المقالات</span><span data-lang="en" hidden>Articles</span></a>
+        <a class="top__link" href="lena-and-maya.html"><span data-lang="ar">لينا ومايا</span><span data-lang="en" hidden>Lena and Maya</span></a>
+        <a class="top__link" href="index.html"><span data-lang="ar">الرئيسية</span><span data-lang="en" hidden>Home</span></a>
       </nav>
 
-      <a class="top__brand" href="index.html" aria-label="AnharVerse">
-        <img class="top__logo" src="assets/logo.png" alt="AnharVerse">
-      </a>
+      <div class="top__tools">
+        <button class="top__menu" type="button" aria-label="القائمة / Menu" aria-expanded="false" aria-controls="mainNav"><span></span></button>
+        <button class="top__lang" id="langBtn" type="button" aria-label="Language / اللغة">EN</button>
+        <a class="top__brand" href="index.html" aria-label="AnharVerse">
+          <img class="top__logo" src="assets/logo.png" alt="AnharVerse" width="44" height="44">
+        </a>
+      </div>
     </div>
     <div class="top__rule"></div>
   </header>
@@ -37,49 +42,80 @@
   <main class="page">
 
     <article class="homePage">
-      <div class="homePage__inner">
 
-        <!-- ── Mission intro ── -->
-        <section class="homeIntro">
+      <!-- ── What is AnharVerse (first thing on the page) ── -->
+      <section class="homeIntro">
+        <div class="homeIntro__inner">
 
           <figure class="homeIntro__figure">
-            <img class="homeIntro__img" src="assets/discover2.jpg" alt="نُهيرا | عالم أنهار">
+            <img class="homeIntro__img" src="assets/home-desk.jpg" width="720" height="1280"
+                 data-lang="ar" alt="المكتب الذي صُوّرت فيه قصة لينا ومايا">
+            <img class="homeIntro__img" src="assets/home-desk.jpg" width="720" height="1280"
+                 data-lang="en" hidden alt="The desk where the Lena and Maya story was made">
           </figure>
 
           <div class="homeIntro__body">
-            <p>
-              عالم أنهار: مشروع تعليمي يجمع بين تعلّم الإنجليزية وتطوير الذات،
-              عبر قصص مصوّرة ثنائية اللغة للأطفال، نُعلّمهم أن يفهموا لا أن يحفظوا،
-              وأن ينموا من الداخل لا أن يكتفوا بإنجازٍ خارجي.
+            <p data-lang="ar">
+              عالم أنهار: مشروع تعليمي يجمع بين تعلم الإنجليزية وتطوير الذات،
+              عبر قصص مصورة ثنائية اللغة للأطفال. نعلمهم أن يفهموا لا أن يحفظوا،
+              وأن ينموا من الداخل لا أن يكتفوا بإنجاز خارجي.
             </p>
-            <a class="homeIntro__cta" href="lena-and-maya.html">اقرئي أول قصة: لينا ومايا</a>
+            <p data-lang="en" hidden>
+              AnharVerse: an educational project that brings together learning English and
+              self-development, through bilingual illustrated stories for children.
+              We teach them to understand, not memorize, and to grow from within,
+              not settle for outward achievement.
+            </p>
+
+            <a class="homeIntro__cta" href="lena-and-maya.html" data-lang="ar">اقرئي أول قصة: لينا ومايا</a>
+            <a class="homeIntro__cta" href="lena-and-maya.html" data-lang="en" hidden>Read the first story: Lena and Maya</a>
           </div>
 
-        </section>
+        </div>
+      </section>
+
+      <div class="homePage__inner">
 
         <!-- ── Hero title ── -->
-        <h1 class="homePage__hero">
+        <h1 class="homePage__hero" data-lang="ar">
           هنا تبدأ الحكاية:<br>
           من فكرةٍ صغيرة… إلى عالم بصريٍّ يصنع أثرًا إنسانيًا يتجاوز الحكاية.
+        </h1>
+        <h1 class="homePage__hero" data-lang="en" hidden>
+          Here the story begins:<br>
+          from a small idea… to a visual world that creates a human impact beyond the story.
         </h1>
 
         <!-- ── Block 1 ── -->
         <section class="homeBlock">
 
           <figure class="homeBlock__figure">
-            <img class="homeBlock__img" src="assets/main1.jpg" alt="عالم أنهار">
+            <img class="homeBlock__img" src="assets/main1.jpg" alt="عالم أنهار" loading="lazy">
           </figure>
 
           <div class="homeBlock__body">
-            <h2 class="homeBlock__heading">ما هو عالم أنهار؟</h2>
-            <p>
-              مساحةٌ تُبنى فيها الأفكار بوعي، وتُروى بالحكاية،
-              لتتحول إلى أعمالٍ تعبّر عن الإنسان،
-              وتترك أثرًا حقيقيًا في التجربة البصرية.
-            </p>
-            <p class="homeBlock__accent">
-              هنا تبدأ رحلتي في تأليف وتصميم أول عمل يعكس هويتي.
-            </p>
+            <div data-lang="ar">
+              <h2 class="homeBlock__heading">ما هو عالم أنهار؟</h2>
+              <p>
+                مساحةٌ تُبنى فيها الأفكار بوعي، وتُروى بالحكاية،
+                لتتحول إلى أعمالٍ تعبّر عن الإنسان،
+                وتترك أثرًا حقيقيًا في التجربة البصرية.
+              </p>
+              <p class="homeBlock__accent">
+                هنا تبدأ رحلتي في تأليف وتصميم أول عمل يعكس هويتي.
+              </p>
+            </div>
+            <div data-lang="en" hidden>
+              <h2 class="homeBlock__heading">What is AnharVerse?</h2>
+              <p>
+                A space where ideas are built with awareness and told through story,
+                turning into works that express the human being
+                and leave a real mark on the visual experience.
+              </p>
+              <p class="homeBlock__accent">
+                Here begins my journey of writing and designing the first work that reflects my identity.
+              </p>
+            </div>
           </div>
 
         </section>
@@ -88,7 +124,7 @@
         <section class="homeBlock">
 
           <figure class="homeBlock__figure">
-            <img class="homeBlock__img" src="assets/main2.jpg" alt="الرحلة">
+            <img class="homeBlock__img" src="assets/main2.jpg" alt="الرحلة" loading="lazy">
           </figure>
 
         </section>
@@ -96,18 +132,25 @@
         <!-- ── Block 3 ── -->
         <section class="homeBlock">
 
-          <h2 class="homeBlock__heading homeBlock__heading--standalone">القصة أولًا</h2>
+          <h2 class="homeBlock__heading homeBlock__heading--standalone" data-lang="ar">القصة أولًا</h2>
+          <h2 class="homeBlock__heading homeBlock__heading--standalone" data-lang="en" hidden>Story first</h2>
 
           <figure class="homeBlock__figure">
-            <img class="homeBlock__img" src="assets/main3.jpg" alt="القصة أولًا">
+            <img class="homeBlock__img" src="assets/main3.jpg" alt="القصة أولًا" loading="lazy">
           </figure>
 
           <div class="homeBlock__body">
-            <p>
-              في عالم أنهار، تبدأ كل فكرة بحكاية —<br>
+            <p data-lang="ar">
+              في عالم أنهار، تبدأ كل فكرة بحكاية،<br>
               حكاية إنسان… تجربةٍ… وسؤالٍ عميق.<br>
               فالقصص هي أقرب الطرق إلى الفهم،
               وأصدق وسيلةٍ للتأثير!
+            </p>
+            <p data-lang="en" hidden>
+              In AnharVerse, every idea begins with a story,<br>
+              the story of a person… an experience… and a deep question.<br>
+              Stories are the closest path to understanding
+              and the most honest means of influence!
             </p>
           </div>
 
@@ -116,23 +159,38 @@
         <!-- ── Block 4 ── -->
         <section class="homeBlock">
 
-          <h2 class="homeBlock__heading homeBlock__heading--standalone">الإبداع</h2>
+          <h2 class="homeBlock__heading homeBlock__heading--standalone" data-lang="ar">الإبداع</h2>
+          <h2 class="homeBlock__heading homeBlock__heading--standalone" data-lang="en" hidden>Creativity</h2>
 
           <figure class="homeBlock__figure">
-            <img class="homeBlock__img" src="assets/main4.jpg" alt="الإبداع">
+            <img class="homeBlock__img" src="assets/main4.jpg" alt="الإبداع" loading="lazy">
           </figure>
 
           <div class="homeBlock__body">
-            <p>
-              الإبداع في هذا العالم ليس مجرد تصميم جميل،<br>
-              بل طريقة تفكير تحول القصة إلى رؤية،<br>
-              والفكرة إلى تجربة بصرية متكاملة.
-            </p>
-            <h3 class="homeBlock__subheading">من الإلهام إلى نتائج ملموسة</h3>
-            <p>
-              كل فكرةٍ تبدأ بإلهام، وتتحوّل بوعيٍ إلى مشروعٍ قابلٍ للتطبيق،<br>
-              يحمل معنى… ويترك أثرًا.
-            </p>
+            <div data-lang="ar">
+              <p>
+                الإبداع في هذا العالم ليس مجرد تصميم جميل،<br>
+                بل طريقة تفكير تحول القصة إلى رؤية،<br>
+                والفكرة إلى تجربة بصرية متكاملة.
+              </p>
+              <h3 class="homeBlock__subheading">من الإلهام إلى نتائج ملموسة</h3>
+              <p>
+                كل فكرةٍ تبدأ بإلهام، وتتحوّل بوعيٍ إلى مشروعٍ قابلٍ للتطبيق،<br>
+                يحمل معنى… ويترك أثرًا.
+              </p>
+            </div>
+            <div data-lang="en" hidden>
+              <p>
+                Creativity in this world is not just beautiful design,<br>
+                but a way of thinking that turns a story into a vision,<br>
+                and an idea into a complete visual experience.
+              </p>
+              <h3 class="homeBlock__subheading">From inspiration to tangible results</h3>
+              <p>
+                Every idea begins with inspiration and, with awareness, becomes a workable project<br>
+                that carries meaning… and leaves an impact.
+              </p>
+            </div>
           </div>
 
         </section>
@@ -142,24 +200,25 @@
 
   </main>
 
-  <footer class="siteFooter" dir="rtl">
+  <footer class="siteFooter">
     <div class="siteFooter__rule" aria-hidden="true"></div>
 
     <div class="siteFooter__inner">
       <div class="siteFooter__left">
-        <img class="siteFooter__logo" src="assets/logo.png" alt="AnharVerse" />
-        <p class="siteFooter__smallText">نلتقي أيضًا هنا..</p>
-        <div class="siteFooter__social" dir="ltr" aria-label="روابط التواصل الاجتماعي">
+        <img class="siteFooter__logo" src="assets/logo.png" alt="AnharVerse" width="34" height="34" />
+        <p class="siteFooter__smallText"><span data-lang="ar">نلتقي أيضًا هنا..</span><span data-lang="en" hidden>Find us here too..</span></p>
+        <div class="siteFooter__social" dir="ltr" aria-label="Social">
           <a class="siteFooter__icon" href="#" aria-label="Facebook">f</a>
           <a class="siteFooter__icon" href="#" aria-label="LinkedIn">in</a>
-          <a class="siteFooter__icon" href="#" aria-label="YouTube">▶</a>
-          <a class="siteFooter__icon" href="#" aria-label="Instagram">◎</a>
+          <a class="siteFooter__icon" href="https://www.youtube.com/@AnharVerse1" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+          <a class="siteFooter__icon" href="https://instagram.com/anhar.verse" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
         </div>
       </div>
 
-      <h3 class="siteFooter__headline">الرحلة مازالت في بدايتها...</h3>
+      <h3 class="siteFooter__headline"><span data-lang="ar">الرحلة مازالت في بدايتها...</span><span data-lang="en" hidden>The journey is only just beginning...</span></h3>
     </div>
   </footer>
 
+  <script src="site.js" defer></script>
 </body>
 </html>

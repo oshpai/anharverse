@@ -17,7 +17,7 @@
 
   <header class="top">
     <div class="top__inner">
-      <nav class="top__nav" aria-label="Main">
+      <nav class="top__nav" id="mainNav" aria-label="Main">
         <a class="top__btn" href="about.html">تعرّف على</a>
         <a class="top__link" href="contact.html">عن أنهار</a>
         <a class="top__link" href="vision.html">الرؤية</a>
@@ -27,9 +27,12 @@
         <a class="top__link" href="index.html">الرئيسية</a>
       </nav>
 
-      <a class="top__brand" href="index.html" aria-label="AnharVerse">
-        <img class="top__logo" src="assets/logo.png" alt="AnharVerse">
-      </a>
+      <div class="top__tools">
+        <button class="top__menu" type="button" aria-label="القائمة / Menu" aria-expanded="false" aria-controls="mainNav"><span></span></button>
+        <a class="top__brand" href="index.html" aria-label="AnharVerse">
+          <img class="top__logo" src="assets/logo.png" alt="AnharVerse" width="44" height="44">
+        </a>
+      </div>
     </div>
     <div class="top__rule"></div>
   </header>
@@ -212,5 +215,6 @@
     </div>
   </footer>
 
+  <script src="site.js" defer></script>
 </body>
 </html>
